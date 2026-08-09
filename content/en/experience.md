@@ -6,8 +6,10 @@ draft: false
 
 ## Experience
 
+<!-- VERIFY: the dates below are placeholders — confirm or correct them. -->
+
 ### Platform Engineer — TekGarden (2024–Present)
-Building and operating a self-managed Kubernetes platform. GitOps with FluxCD, observability with Grafana/Prometheus/Loki, IaC with Ansible/OpenTofu. 4-node Proxmox cluster running k3s.
+Building and operating a self-managed Kubernetes platform. GitOps with FluxCD, observability with Grafana/Prometheus/Loki, IaC with Ansible/OpenTofu. 2-node Proxmox cluster (+ QDevice) running two HA k3s clusters.
 
 ### DevOps Engineer — Adidas / Dare Planet (2022–2024)
 Platform engineering and CI/CD pipeline development. Cloud infrastructure automation, deployment pipelines, and container orchestration at scale.

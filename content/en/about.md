@@ -6,9 +6,11 @@ draft: false
 
 ## About Me
 
-I'm Santiago Ramis, a Platform Engineer based in Spain. I specialize in building and operating self-managed infrastructure with Kubernetes, GitOps, and observability at its core.
+I'm Santiago Ramis, a Platform Engineer based in Palma, Mallorca (Spain). I specialize in building and operating self-managed infrastructure with Kubernetes, GitOps, and observability at its core.
 
 ### Trajectory
+
+<!-- VERIFY: the order and roles below are approximate — confirm or correct them. -->
 
 - **Volkswagen** — Systems administration, infrastructure automation
 - **Adidas / Dare Planet** — Platform engineering, CI/CD pipelines, cloud infrastructure
@@ -21,16 +23,21 @@ I'm Santiago Ramis, a Platform Engineer based in Spain. I specialize in building
 **Infrastructure & Orchestration**
 - Kubernetes (k3s), Proxmox VE, Docker, Traefik
 - FluxCD (GitOps), Ansible, OpenTofu/Terraform
+- cert-manager, MetalLB, Kyverno
 
 **Observability & Monitoring**
-- Grafana, Prometheus, Loki
+- Grafana, Prometheus, Loki, Alertmanager
 - Alerting pipelines, dashboards, SLOs
+
+**Security & Secrets**
+- 1Password (vault + service accounts), SOPS/age
+- CrowdSec, NetworkPolicies, Cloudflare
 
 **Languages & Scripting**
 - Python, Bash, Go (learning), YAML/TOML everything
 
 **Cloud & Networking**
-- Cloudflare, B2 backblaze, pfSense
+- Cloudflare, Backblaze B2, pfSense, Hetzner
 - VLANs, reverse proxies, DNS management
 
 ### Philosophy

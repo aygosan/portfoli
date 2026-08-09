@@ -6,8 +6,11 @@ draft: false
 
 ## Get in Touch
 
+**Location:** Palma, Mallorca (Spain)
+**Availability:** Remote / Hybrid
+
 - **LinkedIn:** [linkedin.com/in/ramissan](https://linkedin.com/in/ramissan)
 - **GitHub:** [github.com/haigosan](https://github.com/haigosan)
 - **Email:** [santi@ramisclar.cat](mailto:santi@ramisclar.cat)
 
-Feel free to reach out about platform engineering, DevOps, or homelab infrastructure.
+Feel free to reach out about platform engineering, DevOps, SRE, or homelab infrastructure.

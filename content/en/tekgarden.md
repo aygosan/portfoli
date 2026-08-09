@@ -10,38 +10,69 @@ TekGarden is my self-managed platform — a homelab that evolved into a producti
 
 ### Architecture
 
-- **Proxmox VE** as the hypervisor layer (4 nodes)
-- **Kubernetes (k3s)** with 1 control plane + 3 workers
-- **FluxCD** for GitOps — all deployments are declarative and version-controlled
-- **Traefik** as the ingress controller with automatic TLS
-- **QNAP NAS** for storage and Docker services
+- **Proxmox VE** cluster: 2 hypervisor nodes (`altair`, `draco`) + a QDevice for quorum
+- **Kubernetes (k3s)** — two HA clusters:
+  - **Vega** — production (3 control plane + 3 workers)
+  - **Orion** — staging (3 control plane + 3 workers)
+- **Docker** standalone on 3 nodes: `maggie` (20+ stacks), `edgeway`, `openclaw`
+- **Forgejo VPS** on Hetzner Cloud — self-hosted Git with CI runners
+- **Traefik** ingress controller with cert-manager + Let's Encrypt + external-dns
+- **MetalLB** for bare-metal LoadBalancer services
 
 ### GitOps Pipeline
 
-Every change flows through Git:
-1. Issue created with the change description
-2. Branch and PR opened in the relevant repo
-3. Review and merge
-4. FluxCD detects and applies automatically
+Every change flows through Git. Six independent repositories, each with its own remote and role:
 
-Repos: `fluxcd` (k8s manifests), `ansible` (configuration), `opentofu` (IaC), `docker` (images), `tekgarden` (docs)
+| Repo | Role |
+|------|------|
+| `fluxcd` | Kubernetes manifests (FluxCD + Kustomize) |
+| `ansible` | Configuration management (ansible-pull) |
+| `opentofu` | Infrastructure provisioning (Proxmox, Hetzner, Cloudflare) |
+| `docker` | Standalone Compose stacks |
+| `tekgarden` | Docs (MkDocs Material, Diátaxis) |
+| `openclaw` | Minecraft bot "Rumi" (Mineflayer + MCP) |
+
+1. Issue → branch → PR in the relevant repo
+2. Review and merge
+3. FluxCD reconciles k8s every 1m; Ansible-pull runs every 15m via systemd timer; Docker CI deploys via self-hosted runners on each node
+
+### Secrets
+
+- **1Password** as the central vault (`op inject` + service accounts)
+- **SOPS + age** for encrypted secrets committed to GitOps
+- **Kyverno** policies to sync pull secrets and enforce governance
+- **OnePasswordItem CRD** for runtime secrets in Kubernetes
 
 ### Observability
 
 - **Grafana** dashboards for all services
 - **Prometheus** metrics collection
 - **Loki** log aggregation
-- Alerting via Telegram bots
+- **Alertmanager** → Telegram alerts
 
 ### Infrastructure as Code
 
-- **Ansible** for configuration management
-- **OpenTofu** for provisioning
-- Everything version-controlled, no manual changes
+- **Ansible** for configuration (pull mode, idempotent, feature-flagged roles)
+- **OpenTofu** for provisioning (LXC/VM lifecycle on Proxmox)
+- Everything version-controlled — no manual infrastructure changes
+
+### Network & Security
+
+- **pfSense** router with segmented VLANs
+- **Pi-hole** + Unbound for DNS filtering
+- **Cloudflare** for public DNS and tunneling
+- **CrowdSec** intrusion prevention
+- **Kyverno** policies + Kubernetes NetworkPolicies
+- **Proxmox PBS** + **Backblaze B2** for backups
+
+### Beyond Infrastructure — openclaw
+
+**Rumi** is a Minecraft bot built with Mineflayer and exposed as an MCP (Model Context Protocol) server, letting LLM agents interact with the game world. It lives in the `openclaw` repo alongside autonomous agents and LXC services.
 
 ### Stats
 
-- ~30 Docker services running on QNAP
-- 4 Kubernetes nodes
-- 99.9%+ uptime goal
-- All infrastructure declarative
+- 2 Proxmox nodes + QDevice
+- 2 HA Kubernetes clusters (12 nodes total)
+- 3 Docker hosts (30+ services)
+- 6 GitOps repositories
+- All infrastructure declarative and version-controlled

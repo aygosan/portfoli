@@ -6,8 +6,10 @@ draft: false
 
 ## Experiencia
 
+<!-- VERIFY: las fechas siguientes son placeholders — confírmalas o corrígelas. -->
+
 ### Ingeniero de Plataforma — TekGarden (2024–Actualidad)
-Construyendo y operando una plataforma Kubernetes auto-gestionada. GitOps con FluxCD, observabilidad con Grafana/Prometheus/Loki, IaC con Ansible/OpenTofu. Clúster Proxmox de 4 nodos con k3s.
+Construyendo y operando una plataforma Kubernetes auto-gestionada. GitOps con FluxCD, observabilidad con Grafana/Prometheus/Loki, IaC con Ansible/OpenTofu. Clúster Proxmox de 2 nodos (+ QDevice) ejecutando dos clústeres HA de k3s.
 
 ### Ingeniero DevOps — Adidas / Dare Planet (2022–2024)
 Ingeniería de plataforma y desarrollo de pipelines CI/CD. Automatización de infraestructura cloud, pipelines de despliegue y orquestación de contenedores a escala.
