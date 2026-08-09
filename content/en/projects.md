@@ -32,16 +32,16 @@ A homelab evolved into a production-grade platform running 24/7 on Proxmox with 
 
 ---
 
-### openclaw — Rumi, the Minecraft bot
+### Minecraft bot — autonomous in-game agent
 
 **Role:** Architect and developer
 
-A Minecraft bot built with [Mineflayer](https://github.com/PrismarineJS/mineflayer) and exposed as an MCP (Model Context Protocol) server, letting LLM agents perceive and act in the game world.
+An autonomous Minecraft bot that connects directly to the game server via a plugin, able to interact with the world in real time. It bridges LLM agents and a live, stateful game environment through a standard protocol.
 
 **What it does:**
-- Autonomous Minecraft bot with pathfinding, building, and chat
-- MCP server interface so LLM agents can call game actions as tools
-- Lives in its own GitOps-managed repo with LXC services
+- Autonomous in-game actions: pathfinding, building, chat
+- Exposed as an MCP (Model Context Protocol) server so LLM agents can call game actions as tools
+- Runs on GitOps-managed infrastructure
 
 **Tech stack:** Node.js, Mineflayer, MCP, TypeScript
 

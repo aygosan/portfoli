@@ -101,16 +101,10 @@ defaultContentLanguageInSubdir = false
   weight = 4
 
 [[languages.ca.menu.main]]
-  identifier = "/blog"
-  name = "Blog"
-  url = "/blog/"
-  weight = 5
-
-[[languages.ca.menu.main]]
   identifier = "/contact"
   name = "Contacte"
   url = "/contact/"
-  weight = 6
+  weight = 5
 
 [[languages.en.menu.main]]
   identifier = "/about"
@@ -137,16 +131,10 @@ defaultContentLanguageInSubdir = false
   weight = 4
 
 [[languages.en.menu.main]]
-  identifier = "/blog"
-  name = "Blog"
-  url = "/blog/"
-  weight = 5
-
-[[languages.en.menu.main]]
   identifier = "/contact"
   name = "Contact"
   url = "/contact/"
-  weight = 6
+  weight = 5
 
 [[languages.es.menu.main]]
   identifier = "/about"
@@ -173,16 +161,10 @@ defaultContentLanguageInSubdir = false
   weight = 4
 
 [[languages.es.menu.main]]
-  identifier = "/blog"
-  name = "Blog"
-  url = "/blog/"
-  weight = 5
-
-[[languages.es.menu.main]]
   identifier = "/contact"
   name = "Contacto"
   url = "/contact/"
-  weight = 6
+  weight = 5
 
 # Markup
 [markup]

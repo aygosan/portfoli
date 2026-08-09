@@ -32,16 +32,16 @@ Un homelab convertido en plataforma de grado de producción funcionando 24/7 sob
 
 ---
 
-### openclaw — Rumi, el bot de Minecraft
+### Bot de Minecraft — agente autónomo en el juego
 
 **Rol:** Arquitecto y desarrollador
 
-Un bot de Minecraft construido con [Mineflayer](https://github.com/PrismarineJS/mineflayer) y expuesto como servidor MCP (Model Context Protocol), permitiendo que agentes LLM perciban y actúen en el mundo del juego.
+Un bot de Minecraft autónomo que se conecta directamente al servidor del juego vía un plugin, capaz de interactuar con el mundo en tiempo real. Hace de puente entre agentes LLM y un entorno de juego con estado, a través de un protocolo estándar.
 
 **Qué hace:**
-- Bot autónomo de Minecraft con pathfinding, construcción y chat
-- Interfaz de servidor MCP para que agentes LLM puedan llamar acciones del juego como tools
-- Vive en su propio repo gestionado por GitOps con servicios LXC
+- Acciones autónomas dentro del juego: pathfinding, construcción, chat
+- Expuesto como servidor MCP (Model Context Protocol) para que agentes LLM puedan llamar acciones del juego como tools
+- Funciona sobre infraestructura gestionada por GitOps
 
 **Tecnologías:** Node.js, Mineflayer, MCP, TypeScript
 
