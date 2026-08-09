@@ -51,4 +51,24 @@ Un bot de Minecraft autònom que es connecta directament al servidor del joc via
 
 ---
 
+### Casa intel·ligent — Home Assistant + Zigbee2MQTT
+
+**Rol:** Arquitecte i operador
+
+Un stack complet de casa intel·ligent basat en Home Assistant, amb més de 40 dispositius Zigbee emparellats via Zigbee2MQTT i automatitzacions que van de les rutines diàries a la monitorització de la infraestructura del TekGarden.
+
+**Què fa:**
+- 40+ dispositius Zigbee (sensors, llums, interruptors, etc.) emparellats via Zigbee2MQTT
+- Automatitzacions per a rutines diàries, detecció de presència i alertes
+- Monitoritza la infraestructura del TekGarden (uptime, alertes) i reacciona des de la capa de casa intel·ligent
+- Music Assistant per al control d'àudio multi-habitació integrat amb la casa intel·ligent
+
+**Tecnologies:** Home Assistant, Zigbee2MQTT, Music Assistant, ESPHome, MQTT
+
+**Destacats:**
+- La casa intel·ligent i la monitorització d'infraestructura es creuen — les automatitzacions de casa reaccionen a alertes del TekGarden
+- Àudio multi-habitació sincronitzat via Music Assistant
+
+---
+
 *More projectes coming soon.*

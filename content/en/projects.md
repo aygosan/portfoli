@@ -51,4 +51,24 @@ An autonomous Minecraft bot that connects directly to the game server via a plug
 
 ---
 
+### Smart Home — Home Assistant + Zigbee2MQTT
+
+**Role:** Architect and operator
+
+A full smart home stack built on Home Assistant, with 40+ Zigbee devices paired through Zigbee2MQTT and automations that range from daily routines to TekGarden infrastructure monitoring.
+
+**What it does:**
+- 40+ Zigbee devices (sensors, lights, switches, etc.) paired via Zigbee2MQTT
+- Automations for daily routines, presence detection, and alerts
+- Monitors TekGarden infrastructure (uptime, alerts) and reacts from the smart home layer
+- Music Assistant for multi-room audio control integrated with the smart home
+
+**Tech stack:** Home Assistant, Zigbee2MQTT, Music Assistant, ESPHome, MQTT
+
+**Highlights:**
+- Smart home and infrastructure monitoring cross-pollinate — home automations react to TekGarden alerts
+- Multi-room audio synchronized via Music Assistant
+
+---
+
 *More projects coming soon.*
