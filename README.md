@@ -44,11 +44,11 @@ Pushing to `main` triggers:
 2. Docker image build → push to `ghcr.io/haigosan/portfoli`
 3. FluxCD detects new image and updates the deployment
 
-### Kubernetes
+### Kubernetes (GitOps)
 
-```bash
-kubectl apply -f k8s/
-```
+Deployment is managed by **FluxCD** in the [`ramisclar/fluxcd`](https://github.com/ramisclar/fluxcd)
+repo — see `apps/components/hugo/`. There are no in-repo Kubernetes manifests;
+FluxCD is the single source of truth for the cluster state.
 
 ## Structure
 
@@ -65,7 +65,7 @@ kubectl apply -f k8s/
 ├── Dockerfile         # Multi-stage: Hugo build → nginx serve
 ├── nginx.conf         # Nginx config
 ├── .github/workflows/ # CI/CD
-└── k8s/               # Kubernetes manifests for FluxCD
+└── (no k8s/ — deployment via FluxCD in ramisclar/fluxcd)
 ```
 
 ## License

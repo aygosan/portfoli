@@ -2,25 +2,31 @@ baseURL = "https://santi.ramisclar.cat"
 title = "Santiago Ramis — Platform Engineer"
 theme = "PaperMod"
 enableRobotsTXT = true
-enableGitInfo = true
+enableGitInfo = false
 
 # Multi-language
+# contentDir per language so the default (en) is served at site root (/about/)
+# instead of /en/about/. Without this, Hugo treats content/en as a section.
 defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 
 [languages.en]
   label = "English"
   weight = 1
   title = "Santiago Ramis — Platform Engineer"
+  contentDir = "content/en"
 
 [languages.ca]
   label = "Català"
   weight = 2
   title = "Santiago Ramis — Platform Engineer"
+  contentDir = "content/ca"
 
 [languages.es]
   label = "Español"
   weight = 3
   title = "Santiago Ramis — Platform Engineer"
+  contentDir = "content/es"
 
 # PaperMod params
 [params]
@@ -67,92 +73,113 @@ defaultContentLanguage = "en"
   appendFilePath = true
 
 # Menu — use language-relative URLs
+# identifier must be an absolute path (e.g. "/about") because PaperMod calls
+# site.GetPage .KeyName; a bare name like "about" is ambiguous across the
+# multilingual content tree, while "/about" resolves within the current language.
 [[languages.en.menu.main]]
+  identifier = "/about"
   name = "About"
   url = "/about/"
   weight = 1
 
 [[languages.en.menu.main]]
+  identifier = "/tekgarden"
   name = "TekGarden"
   url = "/tekgarden/"
   weight = 2
 
 [[languages.en.menu.main]]
+  identifier = "/experience"
   name = "Experience"
   url = "/experience/"
   weight = 3
 
 [[languages.en.menu.main]]
+  identifier = "/projects"
   name = "Projects"
   url = "/projects/"
   weight = 4
 
 [[languages.en.menu.main]]
+  identifier = "/blog"
   name = "Blog"
   url = "/blog/"
   weight = 5
 
 [[languages.en.menu.main]]
+  identifier = "/contact"
   name = "Contact"
   url = "/contact/"
   weight = 6
 
 [[languages.ca.menu.main]]
+  identifier = "/about"
   name = "Sobre mi"
   url = "/about/"
   weight = 1
 
 [[languages.ca.menu.main]]
+  identifier = "/tekgarden"
   name = "TekGarden"
   url = "/tekgarden/"
   weight = 2
 
 [[languages.ca.menu.main]]
+  identifier = "/experience"
   name = "Experiència"
   url = "/experience/"
   weight = 3
 
 [[languages.ca.menu.main]]
+  identifier = "/projects"
   name = "Projectes"
   url = "/projects/"
   weight = 4
 
 [[languages.ca.menu.main]]
+  identifier = "/blog"
   name = "Blog"
   url = "/blog/"
   weight = 5
 
 [[languages.ca.menu.main]]
+  identifier = "/contact"
   name = "Contacte"
   url = "/contact/"
   weight = 6
 
 [[languages.es.menu.main]]
+  identifier = "/about"
   name = "Sobre mí"
   url = "/about/"
   weight = 1
 
 [[languages.es.menu.main]]
+  identifier = "/tekgarden"
   name = "TekGarden"
   url = "/tekgarden/"
   weight = 2
 
 [[languages.es.menu.main]]
+  identifier = "/experience"
   name = "Experiencia"
   url = "/experience/"
   weight = 3
 
 [[languages.es.menu.main]]
+  identifier = "/projects"
   name = "Proyectos"
   url = "/projects/"
   weight = 4
 
 [[languages.es.menu.main]]
+  identifier = "/blog"
   name = "Blog"
   url = "/blog/"
   weight = 5
 
 [[languages.es.menu.main]]
+  identifier = "/contact"
   name = "Contacto"
   url = "/contact/"
   weight = 6
