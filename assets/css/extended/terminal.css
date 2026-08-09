@@ -1,0 +1,217 @@
+/* Terminal-style hero section */
+
+.terminal-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.terminal-window {
+  width: 100%;
+  background: var(--bg-surface, #1e293b);
+  border: 1px solid var(--border, #334155);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(20, 184, 166, 0.1);
+  overflow: hidden;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--bg-elevated, #334155);
+  border-bottom: 1px solid var(--border, #334155);
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-dot-red {
+  background: #ef4444;
+}
+
+.terminal-dot-yellow {
+  background: #f59e0b;
+}
+
+.terminal-dot-green {
+  background: #10b981;
+}
+
+.terminal-title {
+  margin-left: auto;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.8rem;
+  color: var(--text-muted, #64748b);
+}
+
+.terminal-body {
+  padding: 20px;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-primary, #e2e8f0);
+}
+
+.terminal-line {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.terminal-prompt {
+  color: var(--primary, #14b8a6);
+  font-weight: 700;
+  user-select: none;
+}
+
+.terminal-command {
+  color: var(--text-primary, #e2e8f0);
+}
+
+.terminal-output {
+  color: var(--text-secondary, #94a3b8);
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+.terminal-link {
+  color: var(--primary, #14b8a6);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--primary-dark, #008080);
+}
+
+.terminal-link:hover {
+  color: var(--primary-light, #2dd4bf);
+}
+
+/* Blinking cursor */
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background: var(--primary, #14b8a6);
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* CTA buttons */
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.hero-btn-primary {
+  background: var(--primary, #14b8a6);
+  color: #0f172a;
+  border: 1px solid var(--primary, #14b8a6);
+}
+
+.hero-btn-primary:hover {
+  background: var(--primary-light, #2dd4bf);
+  border-color: var(--primary-light, #2dd4bf);
+  transform: translateY(-1px);
+}
+
+.hero-btn-secondary {
+  background: transparent;
+  color: var(--text-primary, #e2e8f0);
+  border: 1px solid var(--border-light, #475569);
+}
+
+.hero-btn-secondary:hover {
+  border-color: var(--primary, #14b8a6);
+  color: var(--primary, #14b8a6);
+  transform: translateY(-1px);
+}
+
+/* Hero section spacing */
+.hero-section {
+  padding: 2rem 0;
+}
+
+/* Home content */
+.home-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.home-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary, #94a3b8);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Recent posts on home */
+.recent-posts {
+  margin-top: 3rem;
+}
+
+.recent-posts h2 {
+  margin-bottom: 1.5rem;
+}
+
+.post-entry {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border, #334155);
+}
+
+.post-entry:last-child {
+  border-bottom: none;
+}
+
+.post-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.post-entry-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.post-entry-header h3 a {
+  color: var(--text-primary, #e2e8f0);
+  text-decoration: none;
+}
+
+.post-entry-header h3 a:hover {
+  color: var(--primary, #14b8a6);
+}
+
+.post-entry-header time {
+  font-size: 0.85rem;
+  color: var(--text-muted, #64748b);
+  font-family: var(--font-mono, monospace);
+}

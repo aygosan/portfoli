@@ -1,0 +1,29 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: portfoli
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: "./k8s"
+  sourceRef:
+    kind: GitRepository
+    name: portfoli
+    namespace: flux-system
+  prune: true
+  wait: true
+  targetNamespace: default
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: portfoli
+  namespace: flux-system
+spec:
+  interval: 10m
+  url: https://github.com/haigosan/portfoli
+  ref:
+    branch: main
+  ignore: |
+    /*
+    !/k8s/

@@ -1,0 +1,49 @@
+{{/* Terminal-style hero for homepage */}}
+<div class="terminal-hero">
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <span class="terminal-dot terminal-dot-red"></span>
+      <span class="terminal-dot terminal-dot-yellow"></span>
+      <span class="terminal-dot terminal-dot-green"></span>
+      <span class="terminal-title">santi@tekgarden: ~</span>
+    </div>
+    <div class="terminal-body">
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-command">whoami</span>
+      </div>
+      <div class="terminal-output">santiago_ramis — platform engineer</div>
+
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-command">cat profile.txt</span>
+      </div>
+      <div class="terminal-output">
+        Building self-managed Kubernetes infrastructure.<br>
+        GitOps with FluxCD. Observability with Grafana.<br>
+        Infrastructure as Code. Always declarative.
+      </div>
+
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-command">ls ~/projects/</span>
+      </div>
+      <div class="terminal-output">
+        <span class="terminal-link">TekGarden</span> &nbsp;
+        <span class="terminal-link">FluxCD</span> &nbsp;
+        <span class="terminal-link">Ansible</span> &nbsp;
+        <span class="terminal-link">OpenTofu</span>
+      </div>
+
+      <div class="terminal-line terminal-cursor-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-cursor"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hero-cta">
+  <a href="{{ "/about" | relLangURL }}" class="hero-btn hero-btn-primary">{{ i18n "read_more" | default "Read more" }}</a>
+  <a href="{{ "/contact" | relLangURL }}" class="hero-btn hero-btn-secondary">{{ i18n "contact" | default "Contact" }}</a>
+</div>

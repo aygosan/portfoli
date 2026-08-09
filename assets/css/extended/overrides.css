@@ -1,0 +1,113 @@
+/* Additional PaperMod overrides for teal theme */
+
+/* Nav background */
+.header {
+  background: var(--bg-base, #0f172a) !important;
+}
+
+/* Logo / title */
+.logo {
+  color: var(--primary, #14b8a6) !important;
+}
+
+/* Nav links */
+.nav a {
+  color: var(--text-secondary, #94a3b8) !important;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--primary, #14b8a6) !important;
+}
+
+/* Active nav link */
+.nav a.active {
+  color: var(--primary, #14b8a6) !important;
+  font-weight: 600;
+}
+
+/* Entry cards */
+.entry {
+  background: var(--bg-surface, #1e293b) !important;
+  border: 1px solid var(--border, #334155) !important;
+  border-radius: 12px !important;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.entry:hover {
+  border-color: var(--primary, #14b8a6) !important;
+  transform: translateY(-2px);
+}
+
+/* Entry header */
+.entry-header h2 a {
+  color: var(--text-primary, #e2e8f0) !important;
+}
+
+.entry-header h2 a:hover {
+  color: var(--primary, #14b8a6) !important;
+}
+
+/* Footer */
+.footer {
+  background: var(--bg-base, #0f172a) !important;
+  border-top: 1px solid var(--border, #334155) !important;
+}
+
+/* Social icons */
+.social-icons a svg {
+  color: var(--text-secondary, #94a3b8);
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover svg {
+  color: var(--primary, #14b8a6);
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-base, #0f172a);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-elevated, #334155);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark, #008080);
+}
+
+/* Selection */
+::selection {
+  background: var(--primary, #14b8a6);
+  color: #0f172a;
+}
+
+/* Breadcrumbs */
+.breadcrumbs a {
+  color: var(--text-secondary, #94a3b8) !important;
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary, #14b8a6) !important;
+}
+
+/* TOC */
+.toc {
+  background: var(--bg-surface, #1e293b) !important;
+  border: 1px solid var(--border, #334155) !important;
+  border-radius: 8px;
+}
+
+.toc a {
+  color: var(--text-secondary, #94a3b8) !important;
+}
+
+.toc a:hover {
+  color: var(--primary, #14b8a6) !important;
+}

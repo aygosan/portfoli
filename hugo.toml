@@ -1,0 +1,112 @@
+baseURL = "https://santi.ramisclar.cat"
+languageCode = "en-us"
+title = "Santiago Ramis — Platform Engineer"
+theme = "PaperMod"
+enableRobotsTXT = true
+enableGitInfo = true
+
+# Multi-language
+defaultContentLanguage = "en"
+
+[languages.en]
+  languageName = "English"
+  weight = 1
+  languageCode = "en-us"
+  title = "Santiago Ramis — Platform Engineer"
+
+[languages.ca]
+  languageName = "Català"
+  weight = 2
+  languageCode = "ca-es"
+  title = "Santiago Ramis — Platform Engineer"
+
+[languages.es]
+  languageName = "Español"
+  weight = 3
+  languageCode = "es-es"
+  title = "Santiago Ramis — Platform Engineer"
+
+# PaperMod params
+[params]
+  defaultTheme = "dark"
+  showReadingTime = false
+  showShareButtons = false
+  showPostNavLinks = true
+  showBreadCrumbs = true
+  showCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  author = "Santiago Ramis"
+  description = "Platform Engineer / DevOps & SRE"
+  DateFormat = "2006-01-02"
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+  disableHLJS = false
+  disableThemeToggle = true
+
+# Social
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://linkedin.com/in/ramissan"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/haigosan"
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:santi@ramisclar.cat"
+
+# Home page profile
+[params.homeInfoParams]
+  Title = "Santiago Ramis"
+  Content = "Platform Engineer building self-managed Kubernetes infrastructure, GitOps pipelines, and observability stacks. Currently running TekGarden — a homelab-turned-platform."
+
+# Editable links
+[params.editPost]
+  URL = "https://github.com/haigosan/portfoli/tree/main/content"
+  Text = "Edit this page"
+  appendFilePath = true
+
+# Menu
+[[menu.main]]
+  name = "About"
+  url = "/about"
+  weight = 1
+
+[[menu.main]]
+  name = "TekGarden"
+  url = "/tekgarden"
+  weight = 2
+
+[[menu.main]]
+  name = "Experience"
+  url = "/experience"
+  weight = 3
+
+[[menu.main]]
+  name = "Projects"
+  url = "/projects"
+  weight = 4
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog"
+  weight = 5
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact"
+  weight = 6
+
+# Markup
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
