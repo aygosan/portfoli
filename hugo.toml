@@ -1,5 +1,4 @@
 baseURL = "https://santi.ramisclar.cat"
-languageCode = "en-us"
 title = "Santiago Ramis — Platform Engineer"
 theme = "PaperMod"
 enableRobotsTXT = true
@@ -9,21 +8,18 @@ enableGitInfo = true
 defaultContentLanguage = "en"
 
 [languages.en]
-  languageName = "English"
+  label = "English"
   weight = 1
-  languageCode = "en-us"
   title = "Santiago Ramis — Platform Engineer"
 
 [languages.ca]
-  languageName = "Català"
+  label = "Català"
   weight = 2
-  languageCode = "ca-es"
   title = "Santiago Ramis — Platform Engineer"
 
 [languages.es]
-  languageName = "Español"
+  label = "Español"
   weight = 3
-  languageCode = "es-es"
   title = "Santiago Ramis — Platform Engineer"
 
 # PaperMod params
@@ -70,35 +66,95 @@ defaultContentLanguage = "en"
   Text = "Edit this page"
   appendFilePath = true
 
-# Menu
-[[menu.main]]
+# Menu — use language-relative URLs
+[[languages.en.menu.main]]
   name = "About"
-  url = "/about"
+  url = "/about/"
   weight = 1
 
-[[menu.main]]
+[[languages.en.menu.main]]
   name = "TekGarden"
-  url = "/tekgarden"
+  url = "/tekgarden/"
   weight = 2
 
-[[menu.main]]
+[[languages.en.menu.main]]
   name = "Experience"
-  url = "/experience"
+  url = "/experience/"
   weight = 3
 
-[[menu.main]]
+[[languages.en.menu.main]]
   name = "Projects"
-  url = "/projects"
+  url = "/projects/"
   weight = 4
 
-[[menu.main]]
+[[languages.en.menu.main]]
   name = "Blog"
-  url = "/blog"
+  url = "/blog/"
   weight = 5
 
-[[menu.main]]
+[[languages.en.menu.main]]
   name = "Contact"
-  url = "/contact"
+  url = "/contact/"
+  weight = 6
+
+[[languages.ca.menu.main]]
+  name = "Sobre mi"
+  url = "/about/"
+  weight = 1
+
+[[languages.ca.menu.main]]
+  name = "TekGarden"
+  url = "/tekgarden/"
+  weight = 2
+
+[[languages.ca.menu.main]]
+  name = "Experiència"
+  url = "/experience/"
+  weight = 3
+
+[[languages.ca.menu.main]]
+  name = "Projectes"
+  url = "/projects/"
+  weight = 4
+
+[[languages.ca.menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 5
+
+[[languages.ca.menu.main]]
+  name = "Contacte"
+  url = "/contact/"
+  weight = 6
+
+[[languages.es.menu.main]]
+  name = "Sobre mí"
+  url = "/about/"
+  weight = 1
+
+[[languages.es.menu.main]]
+  name = "TekGarden"
+  url = "/tekgarden/"
+  weight = 2
+
+[[languages.es.menu.main]]
+  name = "Experiencia"
+  url = "/experience/"
+  weight = 3
+
+[[languages.es.menu.main]]
+  name = "Proyectos"
+  url = "/projects/"
+  weight = 4
+
+[[languages.es.menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 5
+
+[[languages.es.menu.main]]
+  name = "Contacto"
+  url = "/contact/"
   weight = 6
 
 # Markup
