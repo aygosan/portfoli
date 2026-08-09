@@ -10,23 +10,23 @@ draft: false
 
 **Rol:** Arquitecte i únic operador
 
-Un homelab convertit en plataforma de grau de producció funcionant sobre Proxmox amb Kubernetes, GitOps i observabilitat completa.
+Un homelab convertit en plataforma de grau de producció funcionant 24/7 sobre Proxmox amb Kubernetes, GitOps i observabilitat completa.
 
 **Què fa:**
-- 2 clústers HA de Kubernetes (Vega producció + Orion staging) — 12 nodes en total
+- 2 clústers HA de Kubernetes (producció + staging) — 12 nodes en total
 - 3 hosts Docker executant 30+ serveis
 - Desplegaments GitOps via FluxCD (6 repos, reconcilia cada 1m)
 - Stack d'observabilitat completa (Grafana, Prometheus, Loki, Alertmanager → Telegram)
 - Infraestructura com a Codi amb Ansible (mode pull) i OpenTofu
 - Secrets via 1Password + SOPS/age + policies Kyverno
 - Backups a Proxmox PBS + Backblaze B2
+- Forgejo self-hosted + runners de CI al VPS de Hetzner
 
 **Tecnologies:** k3s, FluxCD, Proxmox VE, Traefik, cert-manager, MetalLB, Grafana, Ansible, OpenTofu, Docker, 1Password, Kyverno, CrowdSec, pfSense, Cloudflare
 
 **Destacats:**
 - Tot declaratiu — sense canvis manuals d'infraestructura
 - Tots els canvis via PR → merge → FluxCD aplica
-- Forgejo self-hosted + runners de CI al VPS de Hetzner
 - Pipeline d'alertes d'infraestructura a Telegram
 - Documentació tractada com a infraestructura (MkDocs, Diátaxis)
 

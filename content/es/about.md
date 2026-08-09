@@ -6,13 +6,17 @@ draft: false
 
 ## Sobre mí
 
-Soy Santiago Ramis, ingeniero de Plataforma con sede en Palma, Mallorca (España). Especializado en construir y operar infraestructura auto-gestionada con Kubernetes, GitOps y observabilidad.
+Soy Santiago Ramis, ingeniero de Plataforma con sede en Palma, Mallorca (España) y más de 20 años de experiencia en IT. Actualmente enfocado en Kubernetes, GitOps y automatización de infraestructura en la industria de la automoción.
+
+Diseño y opero plataformas multi-entorno sobre OpenShift, gestionando todo el ciclo de vida desde el desarrollo de Helm charts hasta la entrega continua con ArgoCD. Mi fuerte es convertir problemas de infraestructura complejos en soluciones simples y automatizadas — ya sea migrando despliegues legacy a GitOps, implementando stacks de observabilidad, o construyendo pipelines de CI/CD.
+
+Funciono mejor en equipos pequeños y de alto impacto donde la ownership y la autonomía importan. Soy pragmático, orientado a KISS, y me preocupo profundamente por la fiabilidad y la experiencia del desarrollador.
 
 ### Trayectoria
 
-<!-- VERIFY: el orden y los roles siguientes son aproximados — confírmalos o corrígelos. -->
+<!-- VERIFY: el orden y las fechas siguientes son aproximados — confírmalos o corrígelos. -->
 
-- **Volkswagen** — Administración de sistemas, automatización de infraestructura
+- **Industria de la automoción** — Ingeniería de plataforma sobre OpenShift, GitOps con ArgoCD, ciclo de vida de Helm charts
 - **Adidas / Dare Planet** — Ingeniería de plataforma, pipelines CI/CD, infraestructura cloud
 - **Brújula / CMC** — Prácticas DevOps, infraestructura como código
 - **RIU Hotels** — Backend y trabajo de plataforma
@@ -21,12 +25,12 @@ Soy Santiago Ramis, ingeniero de Plataforma con sede en Palma, Mallorca (España
 ### Habilidades
 
 **Infraestructura y Orquestación**
-- Kubernetes (k3s), Proxmox VE, Docker, Traefik
-- FluxCD (GitOps), Ansible, OpenTofu/Terraform
-- cert-manager, MetalLB, Kyverno
+- Kubernetes, OpenShift, k3s, Proxmox VE, Docker, Traefik
+- Helm, FluxCD, ArgoCD (GitOps), Ansible, OpenTofu/Terraform
+- cert-manager, MetalLB, Kyverno, Vagrant, VMWare
 
 **Observabilidad y Monitoreo**
-- Grafana, Prometheus, Loki, Alertmanager
+- Grafana, Prometheus, Loki, Alertmanager, Nagios
 - Pipelines de alertas, dashboards, SLOs
 
 **Seguridad y Secretos**
@@ -34,11 +38,22 @@ Soy Santiago Ramis, ingeniero de Plataforma con sede en Palma, Mallorca (España
 - CrowdSec, NetworkPolicies, Cloudflare
 
 **Lenguajes y Scripting**
-- Python, Bash, Go (aprendiendo), YAML/TOML
+- Python, Bash, PHP, Go (aprendiendo), SQL, YAML/TOML
 
 **Cloud y Redes**
-- Cloudflare, Backblaze B2, pfSense, Hetzner
+- AWS, Cloudflare, Backblaze B2, Hetzner, pfSense
 - VLANs, reverse proxies, gestión de DNS
+
+### Idiomas
+
+- **Catalán** — Nativo/Bilingüe
+- **Español** — Nativo/Bilingüe
+- **Inglés** — Fluido
+
+### Más allá de la IT
+
+- **Batería** — Me gusta mucho la música rock y toqué con un grupo hasta 2020.
+- **Familia** — Mi familia es lo más importante que tengo en la vida, así que intento pasar todo el tiempo libre que puedo con mi mujer y mis dos hijas pequeñas.
 
 ### Filosofía
 

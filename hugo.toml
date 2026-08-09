@@ -5,22 +5,22 @@ enableRobotsTXT = true
 enableGitInfo = false
 
 # Multi-language
-# contentDir per language so the default (en) is served at site root (/about/)
-# instead of /en/about/. Without this, Hugo treats content/en as a section.
-defaultContentLanguage = "en"
+# contentDir per language so the default (ca) is served at site root (/about/)
+# instead of /ca/about/. Without this, Hugo treats content/ca as a section.
+defaultContentLanguage = "ca"
 defaultContentLanguageInSubdir = false
-
-[languages.en]
-  label = "English"
-  weight = 1
-  title = "Santiago Ramis — Platform Engineer"
-  contentDir = "content/en"
 
 [languages.ca]
   label = "Català"
-  weight = 2
+  weight = 1
   title = "Santiago Ramis — Platform Engineer"
   contentDir = "content/ca"
+
+[languages.en]
+  label = "English"
+  weight = 2
+  title = "Santiago Ramis — Platform Engineer"
+  contentDir = "content/en"
 
 [languages.es]
   label = "Español"
@@ -39,7 +39,7 @@ defaultContentLanguageInSubdir = false
   ShowToc = true
   TocOpen = false
   author = "Santiago Ramis"
-  description = "Platform Engineer / DevOps & SRE"
+  description = "Platform Engineer — Kubernetes, GitOps, automatització d'infraestructura"
   DateFormat = "2006-01-02"
   hidemeta = false
   hideSummary = false
@@ -64,7 +64,7 @@ defaultContentLanguageInSubdir = false
 # Home page profile
 [params.homeInfoParams]
   Title = "Santiago Ramis"
-  Content = "Platform Engineer building self-managed Kubernetes infrastructure, GitOps pipelines, and observability stacks. Currently running TekGarden — a homelab-turned-platform."
+  Content = "Platform Engineer amb més de 20 anys d'experiència en IT. Actualment enfocat en Kubernetes, GitOps i automatització d'infraestructura. Construeixo i opero TekGarden — un homelab convertit en plataforma de producció."
 
 # Editable links
 [params.editPost]
@@ -76,42 +76,6 @@ defaultContentLanguageInSubdir = false
 # identifier must be an absolute path (e.g. "/about") because PaperMod calls
 # site.GetPage .KeyName; a bare name like "about" is ambiguous across the
 # multilingual content tree, while "/about" resolves within the current language.
-[[languages.en.menu.main]]
-  identifier = "/about"
-  name = "About"
-  url = "/about/"
-  weight = 1
-
-[[languages.en.menu.main]]
-  identifier = "/tekgarden"
-  name = "TekGarden"
-  url = "/tekgarden/"
-  weight = 2
-
-[[languages.en.menu.main]]
-  identifier = "/experience"
-  name = "Experience"
-  url = "/experience/"
-  weight = 3
-
-[[languages.en.menu.main]]
-  identifier = "/projects"
-  name = "Projects"
-  url = "/projects/"
-  weight = 4
-
-[[languages.en.menu.main]]
-  identifier = "/blog"
-  name = "Blog"
-  url = "/blog/"
-  weight = 5
-
-[[languages.en.menu.main]]
-  identifier = "/contact"
-  name = "Contact"
-  url = "/contact/"
-  weight = 6
-
 [[languages.ca.menu.main]]
   identifier = "/about"
   name = "Sobre mi"
@@ -119,21 +83,21 @@ defaultContentLanguageInSubdir = false
   weight = 1
 
 [[languages.ca.menu.main]]
-  identifier = "/tekgarden"
-  name = "TekGarden"
-  url = "/tekgarden/"
-  weight = 2
-
-[[languages.ca.menu.main]]
   identifier = "/experience"
   name = "Experiència"
   url = "/experience/"
-  weight = 3
+  weight = 2
 
 [[languages.ca.menu.main]]
   identifier = "/projects"
   name = "Projectes"
   url = "/projects/"
+  weight = 3
+
+[[languages.ca.menu.main]]
+  identifier = "/architecture"
+  name = "Arquitectura"
+  url = "/architecture/"
   weight = 4
 
 [[languages.ca.menu.main]]
@@ -148,6 +112,42 @@ defaultContentLanguageInSubdir = false
   url = "/contact/"
   weight = 6
 
+[[languages.en.menu.main]]
+  identifier = "/about"
+  name = "About"
+  url = "/about/"
+  weight = 1
+
+[[languages.en.menu.main]]
+  identifier = "/experience"
+  name = "Experience"
+  url = "/experience/"
+  weight = 2
+
+[[languages.en.menu.main]]
+  identifier = "/projects"
+  name = "Projects"
+  url = "/projects/"
+  weight = 3
+
+[[languages.en.menu.main]]
+  identifier = "/architecture"
+  name = "Architecture"
+  url = "/architecture/"
+  weight = 4
+
+[[languages.en.menu.main]]
+  identifier = "/blog"
+  name = "Blog"
+  url = "/blog/"
+  weight = 5
+
+[[languages.en.menu.main]]
+  identifier = "/contact"
+  name = "Contact"
+  url = "/contact/"
+  weight = 6
+
 [[languages.es.menu.main]]
   identifier = "/about"
   name = "Sobre mí"
@@ -155,21 +155,21 @@ defaultContentLanguageInSubdir = false
   weight = 1
 
 [[languages.es.menu.main]]
-  identifier = "/tekgarden"
-  name = "TekGarden"
-  url = "/tekgarden/"
-  weight = 2
-
-[[languages.es.menu.main]]
   identifier = "/experience"
   name = "Experiencia"
   url = "/experience/"
-  weight = 3
+  weight = 2
 
 [[languages.es.menu.main]]
   identifier = "/projects"
   name = "Proyectos"
   url = "/projects/"
+  weight = 3
+
+[[languages.es.menu.main]]
+  identifier = "/architecture"
+  name = "Arquitectura"
+  url = "/architecture/"
   weight = 4
 
 [[languages.es.menu.main]]

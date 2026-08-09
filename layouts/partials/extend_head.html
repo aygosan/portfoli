@@ -1,0 +1,9 @@
+{{/* Mermaid.js for diagram support — loaded only on pages that use the mermaid shortcode */}}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (typeof mermaid !== "undefined") {
+      mermaid.initialize({ startOnLoad: true, theme: "dark" });
+    }
+  });
+</script>
