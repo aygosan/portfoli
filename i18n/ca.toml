@@ -1,18 +1,26 @@
-read_more:
-  other: "Llegir més"
-contact:
-  other: "Contacte"
-recent_posts:
-  other: "Articles recents"
-home:
-  other: "Inici"
-about:
-  other: "Sobre mi"
-experience:
-  other: "Experiència"
-projects:
-  other: "Projectes"
-blog:
-  other: "Blog"
-tekgarden:
-  other: "TekGarden"
+[read_more]
+other = "Llegir més"
+
+[contact]
+other = "Contacte"
+
+[recent_posts]
+other = "Articles recents"
+
+[home]
+other = "Inici"
+
+[about]
+other = "Sobre mi"
+
+[experience]
+other = "Experiència"
+
+[projects]
+other = "Projectes"
+
+[blog]
+other = "Blog"
+
+[tekgarden]
+other = "TekGarden"
