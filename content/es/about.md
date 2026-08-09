@@ -14,13 +14,11 @@ Funciono mejor en equipos pequeños y de alto impacto donde la ownership y la au
 
 ### Trayectoria
 
-<!-- VERIFY: el orden y las fechas siguientes son aproximados — confírmalos o corrígelos. -->
-
-- **Industria de la automoción** — Ingeniería de plataforma sobre OpenShift, GitOps con ArgoCD, ciclo de vida de Helm charts
-- **Adidas / Dare Planet** — Ingeniería de plataforma, pipelines CI/CD, infraestructura cloud
-- **Brújula / CMC** — Prácticas DevOps, infraestructura como código
-- **RIU Hotels** — Backend y trabajo de plataforma
-- **Soporte IT** — Donde todo empezó — resolución de problemas, redes, sistemas
+- **Volkswagen Digital:Hub** (oct 2023 – Actualidad) — Ingeniería de plataforma sobre OpenShift, GitOps con ArgoCD, Helm
+- **Adidas / Dare Planet** (nov 2021 – oct 2023) — Ingeniería de plataforma, CI/CD, infraestructura cloud
+- **Brújula** (jun 2018 – nov 2021) — DevOps, infraestructura como código, backend
+- **RIU Hotels** (2007 – 2009) — Backend y trabajo de plataforma
+- **Soporte Técnico y empresas pequeñas** (2009 – 2018) — Donde todo empezó — resolución de problemas, redes, sistemas
 
 ### Habilidades
 

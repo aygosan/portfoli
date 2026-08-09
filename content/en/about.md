@@ -14,13 +14,11 @@ I work best in small, high-impact teams where ownership and autonomy matter. I'm
 
 ### Trajectory
 
-<!-- VERIFY: the order and dates below are approximate — confirm or correct them. -->
-
-- **Automotive industry** — Platform engineering on OpenShift, GitOps with ArgoCD, Helm chart lifecycle
-- **Adidas / Dare Planet** — Platform engineering, CI/CD pipelines, cloud infrastructure
-- **Brújula / CMC** — DevOps practices, infrastructure as code
-- **RIU Hotels** — Backend and platform work
-- **IT Support** — Where it all began — troubleshooting, networking, systems
+- **Volkswagen Digital:Hub** (Oct 2023 – Present) — Platform engineering on OpenShift, GitOps with ArgoCD, Helm
+- **Adidas / Dare Planet** (Nov 2021 – Oct 2023) — Platform engineering, CI/CD, cloud infrastructure
+- **Brújula** (Jun 2018 – Nov 2021) — DevOps, infrastructure as code, backend
+- **RIU Hotels** (2007 – 2009) — Backend and platform work
+- **IT Support & small companies** (2009 – 2018) — Where it all began — troubleshooting, networking, systems
 
 ### Skills
 
