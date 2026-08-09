@@ -4,10 +4,10 @@ metadata:
   name: portfoli
   namespace: default
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-prod
+    traefik.terraform.tf/v1: "internal-only"
 spec:
   entryPoints:
-    - websecure
+    - web
   routes:
     - match: Host(`santi.ramisclar.cat`)
       kind: Rule
@@ -17,7 +17,8 @@ spec:
       middlewares:
         - name: security-headers
           namespace: default
-  tls:
-    certResolver: letsencrypt-prod
-    domains:
-      - main: santi.ramisclar.cat
+# TLS disabled — internal only. Enable when going public:
+#  tls:
+#    certResolver: letsencrypt-prod
+#    domains:
+#      - main: santi.ramisclar.cat
