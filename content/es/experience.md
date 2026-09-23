@@ -6,14 +6,27 @@ draft: false
 
 ## Experiencia
 
-### Ingeniero de Plataforma — Volkswagen Digital:Hub (Oct 2023–Actualidad)
-Ingeniería de plataforma para entornos OpenShift DEV/QS/PRO con más de 10 microservicios. Migración a GitOps con ArgoCD, migración de Traefik y más de 6 charts de Helm publicados en JFrog. Observabilidad con Grafana, Alloy, Tempo y OpenTelemetry. Terraform para Azure, gestión de incidentes y mentoría.
+### Ingeniero de Plataforma — Volkswagen Digital:Hub (oct 2023 – Actualidad)
+Diseñando y operando plataformas multi-entorno sobre OpenShift. GitOps con ArgoCD, gestión del ciclo de vida de Helm charts, pipelines de CI/CD y stacks de observabilidad. Migrando despliegues legacy a GitOps y automatizando infraestructura a escala.
 
-### Ingeniero de Plataforma — Dare Planet Technology · Adidas PEE · API Stream (Nov 2021–Oct 2023)
+**Tecnologías:** OpenShift, Kubernetes, ArgoCD, Helm, GitHub Actions, Ansible, Terraform, Grafana, Prometheus
+
+### Ingeniero DevOps — Adidas / Dare Planet (nov 2021 – oct 2023)
 Ingeniería de plataforma y desarrollo de pipelines CI/CD. Automatización de infraestructura cloud, pipelines de despliegue y orquestación de contenedores a escala.
 
-### Administrador de Sistemas Linux — Brújula, a CMC company (Jun 2018–Nov 2021)
-Administración de sistemas Linux, implementación de prácticas DevOps, infraestructura como código y workflows de despliegue automatizados.
+**Tecnologías:** Kubernetes, Docker, GitHub Actions, AWS, Ansible
 
-### Operador IT — RIU Hotels & Resorts (Jul 2007–Mar 2009)
-Operaciones IT: soporte de infraestructura, redes y sistemas. Donde todo empezó.
+### Ingeniero de Sistemas — Brújula (jun 2018 – nov 2021)
+Implementación de prácticas DevOps, infraestructura como código y workflows de despliegue automatizados. Desarrollo backend y mantenimiento de plataforma.
+
+**Tecnologías:** Docker, Ansible, PHP, MySQL, Linux
+
+### Desarrollador Backend — RIU Hotels (2007 – 2009)
+Trabajo de backend y plataforma. Desarrollo de APIs, gestión de bases de datos y herramientas internas.
+
+**Tecnologías:** PHP, SQL, Linux
+
+### Soporte Técnico y empresas pequeñas (2009 – 2018)
+Donde todo empezó — resolución de problemas, redes, administración de sistemas en varias empresas pequeñas. Aprendí los fundamentos de la infraestructura arreglando todo lo que se rompía.
+
+**Tecnologías:** Windows, Linux, Redes, VMWare

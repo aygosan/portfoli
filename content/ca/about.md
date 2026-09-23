@@ -6,31 +6,51 @@ draft: false
 
 ## Sobre mi
 
-Sóc Santiago Ramis, enginyer de Plataforma amb seu a Espanya. Especialitzat en construir i operar infraestructura auto-gestionada amb Kubernetes, GitOps i observabilitat.
+<img src="/img/profile.jpg" alt="Santiago Ramis" style="float:right; width:160px; height:160px; border-radius:50%; margin:0 0 1rem 1.5rem; object-fit:cover;" />
 
-### Trajectòria
+Sóc Santiago Ramis, enginyer de Plataforma amb seu a Palma, Mallorca (Espanya) i més de 20 anys d'experiència en IT. Actualment està enfocat en Kubernetes, GitOps i automatització d'infraestructura a la indústria de l'automoció.
 
 - **Volkswagen Digital:Hub** — Platform Engineer, OpenShift i GitOps amb ArgoCD (Oct 2023–Actualitat)
 - **Dare Planet Technology · Adidas** — Platform Engineer, pipelines CI/CD, infraestructura cloud (Nov 2021–Oct 2023)
 - **Brújula, a CMC company** — Administrador de Sistemes Linux (Jun 2018–Nov 2021)
 - **RIU Hotels & Resorts** — Operador IT (Jul 2007–Mar 2009)
+Disseny i opero plataformes multi-entorn sobre OpenShift, gestionant tot el cicle de vida des del desenvolupament de Helm charts fins a l'entrega contínua amb ArgoCD. El meu fort és convertir problemes d'infraestructura complexos en solucions simples i automatitzades — ja sigui migrant desplegaments legacy a GitOps, implementant stacks d'observabilitat, o construint pipelines de CI/CD.
+
+Funciono millor en equips petits i d'alt impacte on l'ownership i l'autonomia importen. Soc pragmàtic, orientat a KISS, i em preocupo profundament per la fiabilitat i l'experiència del desenvolupador.
 
 ### Habilitats
 
 **Infraestructura i Orquestració**
-- Kubernetes (k3s), Proxmox VE, Docker, Traefik
-- FluxCD (GitOps), Ansible, OpenTofu/Terraform
+- Kubernetes, OpenShift, k3s, Proxmox VE, Docker, Traefik
+- Helm, FluxCD, ArgoCD (GitOps), Ansible, OpenTofu/Terraform
+- cert-manager, MetalLB, Kyverno, Vagrant, VMWare
 
 **Observabilitat i Monitorització**
-- Grafana, Prometheus, Loki
+- Grafana, Prometheus, Loki, Alertmanager, Nagios
 - Pipelines d'alertes, dashboards, SLOs
 
+**Seguretat i Secrets**
+- 1Password (vault + service accounts), SOPS/age
+- CrowdSec, NetworkPolicies, Cloudflare
+
 **Llenguatges i Scripting**
-- Python, Bash, Go (aprenent), YAML/TOML
+- Python, Bash, PHP, Go (aprenent), SQL, YAML/TOML
 
 **Cloud i Xarxes**
 - Cloudflare, Backblaze B2, OPNsense
+- AWS, Cloudflare, Backblaze B2, Hetzner, OPNsense
 - VLANs, reverse proxies, gestió de DNS
+
+### Idiomes
+
+- **Català** — Natiu/Bilingüe
+- **Castellà** — Natiu/Bilingüe
+- **Anglès** — Fluid
+
+### Més enllà de la IT
+
+- **Bateria** — M'agrada molt la música rock i vaig tocar amb un grup fins al 2020.
+- **Família** — La meva família és el més important que tinc a la vida, així que intento passar tot el temps lliure que puc amb la meva dona i les meves dues filles petites.
 
 ### Filosofia
 
