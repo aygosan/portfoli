@@ -6,17 +6,14 @@ draft: false
 
 ## Experience
 
-### Platform Engineer — TekGarden (2024–Present)
-Building and operating a self-managed Kubernetes platform. GitOps with FluxCD, observability with Grafana/Prometheus/Loki, IaC with Ansible/OpenTofu. 4-node Proxmox cluster running k3s.
+### Platform Engineer — Volkswagen Digital:Hub (Oct 2023–Present)
+Platform engineering for OpenShift DEV/QS/PRO environments running 10+ microservices. GitOps migration with ArgoCD, Traefik migration, and 6+ Helm charts published to JFrog. Observability with Grafana, Alloy, Tempo, and OpenTelemetry. Terraform for Azure, incident management, and mentoring.
 
-### DevOps Engineer — Adidas / Dare Planet (2022–2024)
+### Platform Engineer — Dare Planet Technology · Adidas PEE · API Stream (Nov 2021–Oct 2023)
 Platform engineering and CI/CD pipeline development. Cloud infrastructure automation, deployment pipelines, and container orchestration at scale.
 
-### Systems Engineer — Brújula / CMC (2020–2022)
-Implemented DevOps practices, infrastructure as code, and automated deployment workflows. Backend development and platform maintenance.
+### Linux Systems Administrator — Brújula, a CMC company (Jun 2018–Nov 2021)
+Linux systems administration, DevOps practices, infrastructure as code, and automated deployment workflows.
 
-### Backend Developer — RIU Hotels (2018–2020)
-Backend and platform work. API development, database management, and internal tooling.
-
-### IT Support Technician (2015–2018)
-Where it all began — troubleshooting, networking, systems administration. Learned the fundamentals of infrastructure by fixing everything that broke.
+### IT Operator — RIU Hotels & Resorts (Jul 2007–Mar 2009)
+IT operations: infrastructure support, networking, and systems. Where it all began.

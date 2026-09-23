@@ -43,7 +43,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/haigosan/portfoli:latest
-            ghcr.io/haigosan/portfoli:${{ github.sha }}
+            ghcr.io/aygosan/portfoli:latest
+            ghcr.io/aygosan/portfoli:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max

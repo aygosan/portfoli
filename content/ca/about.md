@@ -10,11 +10,10 @@ Sóc Santiago Ramis, enginyer de Plataforma amb seu a Espanya. Especialitzat en 
 
 ### Trajectòria
 
-- **Volkswagen** — Administració de sistemes, automatització d'infraestructura
-- **Adidas / Dare Planet** — Enginyeria de plataforma, pipelines CI/CD, infraestructura cloud
-- **Brújula / CMC** — Pràctiques DevOps, infraestructura com a codi
-- **RIU Hotels** — Backend i treball de plataforma
-- **Suport TIC** — On va començar tot — resolució de problemes, xarxes, sistemes
+- **Volkswagen Digital:Hub** — Platform Engineer, OpenShift i GitOps amb ArgoCD (Oct 2023–Actualitat)
+- **Dare Planet Technology · Adidas** — Platform Engineer, pipelines CI/CD, infraestructura cloud (Nov 2021–Oct 2023)
+- **Brújula, a CMC company** — Administrador de Sistemes Linux (Jun 2018–Nov 2021)
+- **RIU Hotels & Resorts** — Operador IT (Jul 2007–Mar 2009)
 
 ### Habilitats
 

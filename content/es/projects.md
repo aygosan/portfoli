@@ -13,19 +13,19 @@ draft: false
 Un homelab convertido en plataforma de producción funcionando sobre Proxmox con Kubernetes, GitOps y observabilidad completa.
 
 **Qué hace:**
-- Aloja ~30 servicios entre Docker y Kubernetes
+- Aloja ~30 servicios autoalojados entre Docker y Kubernetes
 - Despliegues GitOps vía FluxCD
 - Stack de observabilidad completa (Grafana, Prometheus, Loki)
 - Alertas automatizadas vía Telegram
 - Infraestructura como Código con Ansible y OpenTofu
 
-**Tecnologías:** k3s, FluxCD, Proxmox, Traefik, Grafana, Ansible, OpenTofu, Docker, Cloudflare
+**Tecnologías:** k3s, FluxCD, Proxmox, Traefik, Grafana, Ansible, OpenTofu, Cloudflare
 
 **Destacados:**
 - Todo declarativo — sin cambios manuales de infraestructura
 - Todos los cambios vía PR → merge → FluxCD aplica
 - Pipeline de alertas de infraestructura a Telegram
-- Infraestructura documentada como infraestructura
+- Backups 3-2-1 y seguridad por defecto (CrowdSec, fail2ban, VLANs default-deny en OPNsense)
 
 ---
 

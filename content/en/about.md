@@ -10,11 +10,10 @@ I'm Santiago Ramis, a Platform Engineer based in Spain. I specialize in building
 
 ### Trajectory
 
-- **Volkswagen** — Systems administration, infrastructure automation
-- **Adidas / Dare Planet** — Platform engineering, CI/CD pipelines, cloud infrastructure
-- **Brújula / CMC** — DevOps practices, infrastructure as code
-- **RIU Hotels** — Backend and platform work
-- **IT Support** — Where it all began — troubleshooting, networking, systems
+- **Volkswagen Digital:Hub** — Platform Engineer, OpenShift and GitOps with ArgoCD (Oct 2023–Present)
+- **Dare Planet Technology · Adidas** — Platform Engineer, CI/CD pipelines, cloud infrastructure (Nov 2021–Oct 2023)
+- **Brújula, a CMC company** — Linux Systems Administrator (Jun 2018–Nov 2021)
+- **RIU Hotels & Resorts** — IT Operator (Jul 2007–Mar 2009)
 
 ### Skills
 

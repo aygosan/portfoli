@@ -21,7 +21,7 @@ Personal portfolio website built with Hugo and PaperMod theme.
 
 ```bash
 # Clone with submodules
-git clone --recurse-submodules https://github.com/haigosan/portfoli.git
+git clone --recurse-submodules https://github.com/aygosan/portfoli.git
 
 # Serve locally
 hugo server -D
@@ -41,7 +41,7 @@ docker run -p 8080:80 portfoli
 
 Pushing to `main` triggers:
 1. Hugo build
-2. Docker image build → push to `ghcr.io/haigosan/portfoli`
+2. Docker image build → push to `ghcr.io/aygosan/portfoli`
 3. FluxCD detects new image and updates the deployment
 
 ### Kubernetes

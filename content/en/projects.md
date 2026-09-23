@@ -13,19 +13,19 @@ draft: false
 A homelab-turned-production platform running on Proxmox with Kubernetes, GitOps, and full observability.
 
 **What it does:**
-- Hosts ~30 services across Docker and Kubernetes
+- Hosts ~30 self-hosted services across Docker and Kubernetes
 - GitOps-driven deployments via FluxCD
 - Full observability stack (Grafana, Prometheus, Loki)
 - Automated alerting via Telegram
 - Infrastructure as Code with Ansible and OpenTofu
 
-**Tech stack:** k3s, FluxCD, Proxmox, Traefik, Grafana, Ansible, OpenTofu, Docker, Cloudflare
+**Tech stack:** k3s, FluxCD, Proxmox, Traefik, Grafana, Ansible, OpenTofu, Cloudflare
 
 **Highlights:**
 - Everything declarative — no manual infrastructure changes
 - All changes via PR → merge → FluxCD applies
 - Alerting pipeline from infrastructure to Telegram
-- Documented infrastructure as infrastructure itself
+- 3-2-1 backups and secure-by-default setup (CrowdSec, fail2ban, default-deny VLANs on OPNsense)
 
 ---
 

@@ -1,19 +1,19 @@
-baseURL = "https://santi.ramisclar.cat"
+baseURL = "https://aygosan.github.io/portfoli/"
 title = "Santiago Ramis — Platform Engineer"
 theme = "PaperMod"
 enableRobotsTXT = true
 enableGitInfo = true
 
 # Multi-language
-defaultContentLanguage = "en"
-
-[languages.en]
-  label = "English"
-  weight = 1
-  title = "Santiago Ramis — Platform Engineer"
+defaultContentLanguage = "ca"
 
 [languages.ca]
   label = "Català"
+  weight = 1
+  title = "Santiago Ramis — Platform Engineer"
+
+[languages.en]
+  label = "English"
   weight = 2
   title = "Santiago Ramis — Platform Engineer"
 
@@ -49,7 +49,7 @@ defaultContentLanguage = "en"
 
 [[params.socialIcons]]
   name = "github"
-  url = "https://github.com/haigosan"
+  url = "https://github.com/aygosan"
 
 [[params.socialIcons]]
   name = "email"
@@ -62,7 +62,7 @@ defaultContentLanguage = "en"
 
 # Editable links
 [params.editPost]
-  URL = "https://github.com/haigosan/portfoli/tree/main/content"
+  URL = "https://github.com/aygosan/portfoli/tree/main/content"
   Text = "Edit this page"
   appendFilePath = true
 

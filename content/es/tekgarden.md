@@ -10,21 +10,19 @@ TekGarden es mi plataforma auto-gestionada — un homelab que evolucionó en una
 
 ### Arquitectura
 
-- **Proxmox VE** como capa de hipervisor (4 nodos)
-- **Kubernetes (k3s)** con 1 control plane + 3 workers
+- **Proxmox VE** como capa de hipervisor (2 nodos con qdevice)
+- **Kubernetes (k3s)** — 2 clústeres con 6 nodos en total
 - **FluxCD** para GitOps — todos los despliegues son declarativos y versionados
 - **Traefik** como controlador de ingress con TLS automático
-- **QNAP NAS** para almacenamiento y servicios Docker
+- **NAS** para almacenamiento (iSCSI) y servicios de contenedores
 
 ### Pipeline GitOps
 
 Cada cambio fluye por Git:
 1. Se crea un issue con la descripción del cambio
-2. Se crea branch y PR en el repo correspondiente
+2. Se crea una rama y un pull request
 3. Revisión y merge
 4. FluxCD detecta y aplica automáticamente
-
-Repos: `fluxcd` (manifests k8s), `ansible` (configuración), `opentofu` (IaC), `docker` (imágenes), `tekgarden` (docs)
 
 ### Observabilidad
 
@@ -35,13 +33,14 @@ Repos: `fluxcd` (manifests k8s), `ansible` (configuración), `opentofu` (IaC), `
 
 ### Infraestructura como Código
 
-- **Ansible** para gestión de configuración
+- **Ansible** (con ansible-pull) para gestión de configuración
 - **OpenTofu** para provisioning
+- **GitHub Actions** self-hosted para CI
 - Todo versionado, sin cambios manuales
 
 ### Estadísticas
 
-- ~30 servicios Docker en QNAP
-- 4 nodos de Kubernetes
+- ~30 servicios autoalojados entre Docker y Kubernetes
+- 2 clústeres k3s (6 nodos)
 - 99.9%+ objetivo de uptime
 - Toda la infraestructura declarativa
