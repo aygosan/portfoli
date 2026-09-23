@@ -127,15 +127,16 @@
 }
 
 @media (max-width: 768px) {
-  .header {
-    padding: 0;
-  }
-
+  /* Single-row header: title truncated on the left, controls pinned right.
+     The lang switcher + hamburger are positioned absolutely so the long
+     title can never push them onto a second line. */
   .header-nav {
-    flex-wrap: wrap;
+    position: relative;
+    flex-wrap: nowrap;
     align-items: center;
-    padding: 0 0.6rem;
-    column-gap: 0.5rem;
+    padding: 0 0.75rem;
+    min-height: 48px;
+    column-gap: 0;
     row-gap: 0;
     line-height: 1.4;
   }
@@ -143,19 +144,26 @@
   .logo {
     flex: 1 1 auto;
     min-width: 0;
+    padding-right: 112px;
+    overflow: hidden;
   }
 
   .logo a {
-    font-size: 18px;
-    column-gap: 0.4rem;
+    display: block;
+    font-size: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   .logo-switches {
+    position: absolute;
+    top: 50%;
+    right: 46px;
+    transform: translateY(-50%);
+    margin: 0;
     gap: 0.2rem;
-    margin-left: 0;
+    flex: 0 0 auto;
   }
 
   .lang-menu a,
@@ -163,30 +171,90 @@
     padding: 0 0.25rem;
   }
 
-  /* Menu drops to its own full-width row and can scroll, but items never wrap */
-  .menu {
-    order: 3;
-    width: 100%;
-    max-width: 100%;
-    column-gap: 1rem;
+  .nav-toggle {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
     margin: 0;
-    padding: 0 0 0.45rem;
-    overflow-x: auto;
-    justify-content: flex-start;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--text-primary, #e2e8f0);
+    cursor: pointer;
   }
 
-  .menu::-webkit-scrollbar {
+  .nav-toggle svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .nav-toggle .icon-close {
     display: none;
+  }
+
+  .header-nav.nav-open .nav-toggle .icon-open {
+    display: none;
+  }
+
+  .header-nav.nav-open .nav-toggle .icon-close {
+    display: block;
+  }
+
+  /* Menu drops to a full-width panel below the header row */
+  .menu {
+    display: none;
+    order: 4;
+    flex-basis: 100%;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin: 0;
+    padding: 0.35rem 0 0.6rem;
+    overflow: visible;
+  }
+
+  .header-nav.nav-open {
+    flex-wrap: wrap;
+  }
+
+  /* With the menu open, the absolutely-positioned switcher would overlap it */
+  .header-nav.nav-open .logo-switches {
+    position: static;
+    transform: none;
+    margin-left: auto;
+  }
+
+  .header-nav.nav-open .logo {
+    padding-right: 0;
+  }
+
+  .header-nav.nav-open .menu {
+    display: flex;
   }
 
   .menu li {
     flex: 0 0 auto;
+    width: 100%;
   }
 
   .menu a {
-    font-size: 15px;
+    font-size: 16px;
+    display: block;
+    padding: 0.55rem 0.25rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none;
   }
 }
 
