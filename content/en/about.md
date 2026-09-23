@@ -29,7 +29,7 @@ I'm Santiago Ramis, a Platform Engineer based in Spain. I specialize in building
 - Python, Bash, Go (learning), YAML/TOML everything
 
 **Cloud & Networking**
-- Cloudflare, B2 backblaze, pfSense
+- Cloudflare, Backblaze B2, OPNsense
 - VLANs, reverse proxies, DNS management
 
 ### Philosophy
