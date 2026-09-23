@@ -29,4 +29,4 @@ Un homelab convertido en plataforma de producción funcionando sobre Proxmox con
 
 ---
 
-*More proyectos coming soon.*
+*Más proyectos próximamente.*

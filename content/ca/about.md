@@ -29,7 +29,7 @@ Sóc Santiago Ramis, enginyer de Plataforma amb seu a Espanya. Especialitzat en 
 - Python, Bash, Go (aprenent), YAML/TOML
 
 **Cloud i Xarxes**
-- Cloudflare, Backblaze B2, pfSense
+- Cloudflare, Backblaze B2, OPNsense
 - VLANs, reverse proxies, gestió de DNS
 
 ### Filosofia

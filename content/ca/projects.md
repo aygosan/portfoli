@@ -29,4 +29,4 @@ Un homelab convertit en plataforma de producció funcionant sobre Proxmox amb Ku
 
 ---
 
-*More projectes coming soon.*
+*Més projectes properament.*
