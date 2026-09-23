@@ -6,14 +6,14 @@ draft: false
 
 ## Proyectos
 
-### TekGarden — Plataforma Auto-Gestionada
+### TekGarden: Plataforma Auto-Gestionada
 
 **Rol:** Arquitecto y único operador
 
 Un homelab convertido en plataforma de grado de producción funcionando 24/7 sobre Proxmox con Kubernetes, GitOps y observabilidad completa.
 
 **Qué hace:**
-- 2 clústeres HA de Kubernetes (producción + staging) — 12 nodos en total
+- 2 clústeres HA de Kubernetes (producción + staging): 12 nodos en total
 - 3 hosts Docker ejecutando 30+ servicios
 - Despliegues GitOps vía FluxCD (6 repos, reconcilia cada 1m)
 - Stack de observabilidad completa (Grafana, Prometheus, Loki, Alertmanager → Telegram)
@@ -25,14 +25,14 @@ Un homelab convertido en plataforma de grado de producción funcionando 24/7 sob
 **Tecnologías:** k3s, FluxCD, Proxmox VE, Traefik, cert-manager, MetalLB, Grafana, Ansible, OpenTofu, Docker, 1Password, Kyverno, CrowdSec, OPNsense, Cloudflare
 
 **Destacados:**
-- Todo declarativo — sin cambios manuales de infraestructura
+- Todo declarativo: sin cambios manuales de infraestructura
 - Todos los cambios vía PR → merge → FluxCD aplica
 - Pipeline de alertas de infraestructura a Telegram
 - Documentación tratada como infraestructura (MkDocs, Diátaxis)
 
 ---
 
-### Bot de Minecraft — agente autónomo en el juego
+### Bot de Minecraft: agente autónomo en el juego
 
 **Rol:** Arquitecto y desarrollador
 
@@ -51,7 +51,7 @@ Un bot de Minecraft autónomo que se conecta directamente al servidor del juego 
 
 ---
 
-### Casa inteligente — Home Assistant + Zigbee2MQTT
+### Casa inteligente: Home Assistant + Zigbee2MQTT
 
 **Rol:** Arquitecto y operador
 
@@ -66,7 +66,7 @@ Un stack completo de casa inteligente basado en Home Assistant, con más de 40 d
 **Tecnologías:** Home Assistant, Zigbee2MQTT, Music Assistant, ESPHome, MQTT
 
 **Destacados:**
-- La casa inteligente y el monitoreo de infraestructura se cruzan — las automatizaciones del hogar reaccionan a alertas de TekGarden
+- La casa inteligente y el monitoreo de infraestructura se cruzan: las automatizaciones del hogar reaccionan a alertas de TekGarden
 - Audio multi-habitación sincronizado vía Music Assistant
 
 ---

@@ -6,14 +6,14 @@ draft: false
 
 ## Projectes
 
-### TekGarden — Plataforma Auto-Gestionada
+### TekGarden: Plataforma Auto-Gestionada
 
 **Rol:** Arquitecte i únic operador
 
 Un homelab convertit en plataforma de grau de producció funcionant 24/7 sobre Proxmox amb Kubernetes, GitOps i observabilitat completa.
 
 **Què fa:**
-- 2 clústers HA de Kubernetes (producció + staging) — 12 nodes en total
+- 2 clústers HA de Kubernetes (producció + staging): 12 nodes en total
 - 3 hosts Docker executant 30+ serveis
 - Desplegaments GitOps via FluxCD (6 repos, reconcilia cada 1m)
 - Stack d'observabilitat completa (Grafana, Prometheus, Loki, Alertmanager → Telegram)
@@ -25,14 +25,14 @@ Un homelab convertit en plataforma de grau de producció funcionant 24/7 sobre P
 **Tecnologies:** k3s, FluxCD, Proxmox VE, Traefik, cert-manager, MetalLB, Grafana, Ansible, OpenTofu, Docker, 1Password, Kyverno, CrowdSec, OPNsense, Cloudflare
 
 **Destacats:**
-- Tot declaratiu — sense canvis manuals d'infraestructura
+- Tot declaratiu: sense canvis manuals d'infraestructura
 - Tots els canvis via PR → merge → FluxCD aplica
 - Pipeline d'alertes d'infraestructura a Telegram
 - Documentació tractada com a infraestructura (MkDocs, Diátaxis)
 
 ---
 
-### Bot de Minecraft — agent autònom dins el joc
+### Bot de Minecraft: agent autònom dins el joc
 
 **Rol:** Arquitecte i desenvolupador
 
@@ -51,7 +51,7 @@ Un bot de Minecraft autònom que es connecta directament al servidor del joc via
 
 ---
 
-### Casa intel·ligent — Home Assistant + Zigbee2MQTT
+### Casa intel·ligent: Home Assistant + Zigbee2MQTT
 
 **Rol:** Arquitecte i operador
 
@@ -66,7 +66,7 @@ Un stack complet de casa intel·ligent basat en Home Assistant, amb més de 40 d
 **Tecnologies:** Home Assistant, Zigbee2MQTT, Music Assistant, ESPHome, MQTT
 
 **Destacats:**
-- La casa intel·ligent i la monitorització d'infraestructura es creuen — les automatitzacions de casa reaccionen a alertes del TekGarden
+- La casa intel·ligent i la monitorització d'infraestructura es creuen: les automatitzacions de casa reaccionen a alertes del TekGarden
 - Àudio multi-habitació sincronitzat via Music Assistant
 
 ---

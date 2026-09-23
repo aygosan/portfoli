@@ -4,9 +4,46 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 1rem;
-  max-width: 800px;
+  gap: 3rem;
+  padding: 4.5rem 1.5rem 3.5rem;
+  max-width: 1100px;
   margin: 0 auto;
+}
+
+/* Portrait column: profile photo next to the terminal */
+.hero-portrait {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--primary, #14b8a6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 0 4px rgba(20, 184, 166, 0.12);
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.terminal-hero .terminal-window {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .terminal-hero {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 3rem 1rem 2.5rem;
+  }
+
+  .hero-portrait {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .terminal-window {
@@ -154,14 +191,14 @@
 
 /* Hero section spacing */
 .hero-section {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 /* Home content */
 .home-content {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 3rem 1.5rem;
 }
 
 .home-description {

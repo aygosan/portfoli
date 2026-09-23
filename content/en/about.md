@@ -10,11 +10,12 @@ draft: false
 
 I'm Santiago Ramis, a Platform Engineer based in Palma, Mallorca (Spain) with 20+ years of experience in IT. I'm currently focused on Kubernetes, GitOps, and infrastructure automation in the automotive industry.
 
-- **Volkswagen Digital:Hub** — Platform Engineer, OpenShift and GitOps with ArgoCD (Oct 2023–Present)
-- **Dare Planet Technology · Adidas** — Platform Engineer, CI/CD pipelines, cloud infrastructure (Nov 2021–Oct 2023)
-- **Brújula, a CMC company** — Linux Systems Administrator (Jun 2018–Nov 2021)
-- **RIU Hotels & Resorts** — IT Operator (Jul 2007–Mar 2009)
-I design and operate multi-environment platforms on OpenShift, managing the full lifecycle from Helm chart development to continuous delivery with ArgoCD. My strength is turning complex infrastructure problems into simple, automated solutions — whether that's migrating legacy deployments to GitOps, implementing observability stacks, or building CI/CD pipelines.
+- **Volkswagen Digital:Hub**: Platform Engineer, OpenShift and GitOps with ArgoCD (Oct 2023–Present)
+- **Dare Planet Technology · Adidas**: Platform Engineer, CI/CD pipelines, cloud infrastructure (Nov 2021–Oct 2023)
+- **Brújula, a CMC company**: Linux Systems Administrator (Jun 2018–Nov 2021)
+- **RIU Hotels & Resorts**: IT Operator (Jul 2007–Mar 2009)
+
+I design and operate multi-environment platforms on OpenShift, managing the full lifecycle from Helm chart development to continuous delivery with ArgoCD. My strength is turning complex infrastructure problems into simple, automated solutions: whether that's migrating legacy deployments to GitOps, implementing observability stacks, or building CI/CD pipelines.
 
 I work best in small, high-impact teams where ownership and autonomy matter. I'm pragmatic, KISS-oriented, and I care deeply about reliability and developer experience.
 
@@ -37,21 +38,23 @@ I work best in small, high-impact teams where ownership and autonomy matter. I'm
 - Python, Bash, PHP, Go (learning), SQL, YAML/TOML
 
 **Cloud & Networking**
-- Cloudflare, Backblaze B2, OPNsense
 - AWS, Cloudflare, Backblaze B2, Hetzner, OPNsense
 - VLANs, reverse proxies, DNS management
 
 ### Languages
 
-- **Catalan** — Native/Bilingual
-- **Spanish** — Native/Bilingual
-- **English** — Fluent
+- **Catalan**: Native/Bilingual
+- **Spanish**: Native/Bilingual
+- **English**: Fluent
 
 ### Beyond IT
 
-- **Drums** — I love rock music and played in a band until 2020.
-- **Family** — My family is the most important thing in my life, so I try to spend all my free time with my wife and our two young daughters.
+- **Family**: My family is the most important thing in my life, so I try to spend all my free time with my wife and our two young daughters.
+- **Music**: I love rock music and played drums in a band until 2020. I still have the drum kit at home and hit it every now and then.
+- **Anime & manga**: I'm a big fan, especially of science fiction and psychological thrillers. Steins;Gate is one of my reference works.
+- **Basketball**: I follow the NBA and play whenever I can, though my legs are no longer twenty.
+- **DIY**: I enjoy fixing and building things around the house. From wiring to woodwork, any excuse to grab the tools.
 
-### Philosophy
+### Work philosophy
 
-Infrastructure should be declarative, version-controlled, and observable. I believe in documenting everything, automating repetitive work, and building platforms that are a joy to operate.
+I see infrastructure work as a long-term commitment. Everything should be declarative, version-controlled, and observable, because what you can't reproduce, you can't maintain. I document decisions, automate repetitive work, and avoid manual tasks that can be delegated to a machine. My measure of success isn't deploying fast, it's building platforms that are a joy to operate and that make life easier for the people who use them.

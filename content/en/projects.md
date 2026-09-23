@@ -6,14 +6,14 @@ draft: false
 
 ## Projects
 
-### TekGarden — Self-Managed Platform
+### TekGarden: Self-Managed Platform
 
 **Role:** Architect and sole operator
 
 A homelab evolved into a production-grade platform running 24/7 on Proxmox with Kubernetes, GitOps, and full observability.
 
 **What it does:**
-- 2 HA Kubernetes clusters (production + staging) — 12 nodes total
+- 2 HA Kubernetes clusters (production + staging): 12 nodes total
 - 3 Docker hosts running 30+ services
 - GitOps deployments via FluxCD (6 repos, reconciles every 1m)
 - Full observability stack (Grafana, Prometheus, Loki, Alertmanager → Telegram)
@@ -25,14 +25,14 @@ A homelab evolved into a production-grade platform running 24/7 on Proxmox with 
 **Tech stack:** k3s, FluxCD, Proxmox VE, Traefik, cert-manager, MetalLB, Grafana, Ansible, OpenTofu, Docker, 1Password, Kyverno, CrowdSec, OPNsense, Cloudflare
 
 **Highlights:**
-- Everything declarative — no manual infrastructure changes
+- Everything declarative: no manual infrastructure changes
 - All changes via PR → merge → FluxCD applies
 - Alerting pipeline from infrastructure to Telegram
 - Documentation treated as infrastructure (MkDocs, Diátaxis)
 
 ---
 
-### Minecraft bot — autonomous in-game agent
+### Minecraft bot: autonomous in-game agent
 
 **Role:** Architect and developer
 
@@ -51,7 +51,7 @@ An autonomous Minecraft bot that connects directly to the game server via a plug
 
 ---
 
-### Smart Home — Home Assistant + Zigbee2MQTT
+### Smart Home: Home Assistant + Zigbee2MQTT
 
 **Role:** Architect and operator
 
@@ -66,7 +66,7 @@ A full smart home stack built on Home Assistant, with 40+ Zigbee devices paired 
 **Tech stack:** Home Assistant, Zigbee2MQTT, Music Assistant, ESPHome, MQTT
 
 **Highlights:**
-- Smart home and infrastructure monitoring cross-pollinate — home automations react to TekGarden alerts
+- Smart home and infrastructure monitoring cross-pollinate: home automations react to TekGarden alerts
 - Multi-room audio synchronized via Music Assistant
 
 ---
