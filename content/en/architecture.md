@@ -14,6 +14,12 @@ A simplified view of the full flow: from the Git repository to observability, th
 
 ![TekGarden conceptual architecture](/arquitectura-tekgarden.svg)
 
+### Network Diagram
+
+Sample network topology: VLANs separated for management, users, services and IoT, with a VLAN trunk to the L3 switch and service segmentation to limit lateral movement.
+
+![Sample network topology](/xarxa-exemple.svg)
+
 ### Network Overview
 
 {{< mermaid >}}

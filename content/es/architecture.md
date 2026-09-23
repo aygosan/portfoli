@@ -14,6 +14,12 @@ Versión simplificada del flujo completo: del repositorio Git a la observabilida
 
 ![Arquitectura conceptual de TekGarden](/arquitectura-tekgarden.svg)
 
+### Diagrama de red
+
+Topología de red de ejemplo: VLANs separadas para gestión, usuarios, servicios e IoT, con tronco VLAN hacia el switch L3 y segmentación de servicios para limitar el movimiento lateral.
+
+![Topología de red de ejemplo](/xarxa-exemple.svg)
+
 ### Visión de red
 
 {{< mermaid >}}

@@ -14,6 +14,12 @@ Versió simplificada del flux complet: del repositori Git a l'observabilitat, pa
 
 ![Arquitectura conceptual de TekGarden](/arquitectura-tekgarden.svg)
 
+### Diagrama de xarxa
+
+Topologia de xarxa d'exemple: VLANs separades per gestió, usuaris, serveis i IoT, amb tronc VLAN cap al switch L3 i segmentació dels serveis per limitar el moviment lateral.
+
+![Topologia de xarxa d'exemple](/xarxa-exemple.svg)
+
 ### Visió de xarxa
 
 {{< mermaid >}}
