@@ -23,10 +23,10 @@
 
 .terminal-window {
   width: 100%;
-  background: var(--bg-surface, #1e293b);
-  border: 1px solid var(--border, #334155);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(20, 184, 166, 0.1);
+  background: #0a0f09;
+  border: 1px solid #1f2b1c;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(74, 222, 128, 0.12);
   overflow: hidden;
 }
 
@@ -34,35 +34,18 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 16px;
-  background: var(--bg-elevated, #334155);
-  border-bottom: 1px solid var(--border, #334155);
-}
-
-.terminal-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.terminal-dot-red {
-  background: #ef4444;
-}
-
-.terminal-dot-yellow {
-  background: #f59e0b;
-}
-
-.terminal-dot-green {
-  background: #10b981;
+  padding: 10px 16px;
+  background: #10160f;
+  border-bottom: 1px solid #1f2b1c;
 }
 
 .terminal-title {
-  margin-left: auto;
+  color: #4ade80;
+  text-shadow: 0 0 6px rgba(74, 222, 128, 0.45);
+  letter-spacing: 0.02em;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.8rem;
-  color: var(--text-muted, #64748b);
+  color: #3d6b46;
 }
 
 .terminal-body {
@@ -70,7 +53,8 @@
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.9rem;
   line-height: 1.8;
-  color: var(--text-primary, #e2e8f0);
+  color: #4ade80;
+  text-shadow: 0 0 6px rgba(74, 222, 128, 0.35);
 }
 
 .terminal-line {
@@ -80,30 +64,31 @@
 }
 
 .terminal-prompt {
-  color: var(--primary, #14b8a6);
+  color: #4ade80;
   font-weight: 700;
   user-select: none;
+  text-shadow: 0 0 6px rgba(74, 222, 128, 0.45);
 }
 
 .terminal-command {
-  color: var(--text-primary, #e2e8f0);
+  color: #86efac;
 }
 
 .terminal-output {
-  color: var(--text-secondary, #94a3b8);
+  color: #6b9a72;
   padding-left: 20px;
   margin-bottom: 8px;
 }
 
 .terminal-link {
-  color: var(--primary, #14b8a6);
+  color: #86efac;
   cursor: pointer;
   text-decoration: underline;
   text-decoration-color: var(--primary-dark, #008080);
 }
 
 .terminal-link:hover {
-  color: var(--primary-light, #2dd4bf);
+  color: #bbf7d0;
 }
 
 /* Blinking cursor */
@@ -111,7 +96,7 @@
   display: inline-block;
   width: 8px;
   height: 18px;
-  background: var(--primary, #14b8a6);
+  background: #4ade80;
   animation: blink 1s step-end infinite;
   vertical-align: text-bottom;
 }
