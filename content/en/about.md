@@ -6,7 +6,7 @@ draft: false
 
 ## About Me
 
-<img src="/img/profile.jpg" alt="Santiago Ramis" style="float:right; width:160px; height:160px; border-radius:50%; margin:0 0 1rem 1.5rem; object-fit:cover;" />
+<img src="/img/profile.jpg" alt="Santiago Ramis" style="float:right; width:200px; height:200px; border-radius:14px; margin:0 0 1rem 1.5rem; object-fit:cover;" />
 
 I'm Santiago Ramis, a Platform Engineer based in Palma, Mallorca (Spain) with 20+ years of experience in IT. I'm currently focused on Kubernetes, GitOps, and infrastructure automation in the automotive industry.
 

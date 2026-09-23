@@ -6,7 +6,7 @@ draft: false
 
 ## Sobre mí
 
-<img src="/img/profile.jpg" alt="Santiago Ramis" style="float:right; width:160px; height:160px; border-radius:50%; margin:0 0 1rem 1.5rem; object-fit:cover;" />
+<img src="/img/profile.jpg" alt="Santiago Ramis" style="float:right; width:200px; height:200px; border-radius:14px; margin:0 0 1rem 1.5rem; object-fit:cover;" />
 
 Soy Santiago Ramis, ingeniero de Plataforma con sede en Palma, Mallorca (España) y más de 20 años de experiencia en IT. Actualmente enfocado en Kubernetes, GitOps y automatización de infraestructura en la industria de la automoción.
 

@@ -10,25 +10,6 @@
   margin: 0 auto;
 }
 
-/* Portrait column: profile photo next to the terminal */
-.hero-portrait {
-  flex: 0 0 auto;
-  width: 300px;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid rgba(20, 184, 166, 0.35);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
-  background: #0b1120;
-}
-
-.hero-portrait img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-
 .terminal-hero .terminal-window {
   flex: 1 1 auto;
   min-width: 0;
@@ -36,14 +17,7 @@
 
 @media (max-width: 900px) {
   .terminal-hero {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 1.75rem;
     padding: 2.5rem 1rem 2rem;
-  }
-
-  .hero-portrait {
-    width: 220px;
   }
 }
 
