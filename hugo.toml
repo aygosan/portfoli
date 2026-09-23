@@ -1,5 +1,5 @@
 baseURL = "https://santi.ramisclar.cat/"
-title = "Santiago Ramis — Platform Engineer"
+title = "Santiago Ramis: Platform Engineer"
 theme = "PaperMod"
 enableRobotsTXT = true
 enableGitInfo = false
@@ -13,19 +13,19 @@ defaultContentLanguageInSubdir = false
 [languages.ca]
   label = "Català"
   weight = 1
-  title = "Santiago Ramis — Platform Engineer"
+  title = "Santiago Ramis: Platform Engineer"
   contentDir = "content/ca"
 
 [languages.en]
   label = "English"
   weight = 2
-  title = "Santiago Ramis — Platform Engineer"
+  title = "Santiago Ramis: Platform Engineer"
   contentDir = "content/en"
 
 [languages.es]
   label = "Español"
   weight = 3
-  title = "Santiago Ramis — Platform Engineer"
+  title = "Santiago Ramis: Platform Engineer"
   contentDir = "content/es"
 
 # PaperMod params
@@ -39,7 +39,7 @@ defaultContentLanguageInSubdir = false
   ShowToc = true
   TocOpen = false
   author = "Santiago Ramis"
-  description = "Platform Engineer — Kubernetes, GitOps, automatització d'infraestructura"
+  description = "Platform Engineer: Kubernetes, GitOps, automatització d'infraestructura"
   DateFormat = "2006-01-02"
   hidemeta = false
   hideSummary = false
@@ -64,7 +64,7 @@ defaultContentLanguageInSubdir = false
 # Home page profile
 [params.homeInfoParams]
   Title = "Santiago Ramis"
-  Content = "Platform Engineer amb més de 20 anys d'experiència en IT. Actualment enfocat en Kubernetes, GitOps i automatització d'infraestructura. Construeixo i opero TekGarden — un homelab convertit en plataforma de producció."
+  Content = "Platform Engineer amb més de 20 anys d'experiència en IT. Actualment enfocat en Kubernetes, GitOps i automatització d'infraestructura. Construeixo i opero TekGarden, un homelab convertit en plataforma de producció."
 
 # Editable links
 [params.editPost]

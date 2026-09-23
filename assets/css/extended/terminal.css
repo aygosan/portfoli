@@ -3,9 +3,9 @@
 .terminal-hero {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  padding: 4.5rem 1.5rem 3.5rem;
+  align-items: stretch;
+  gap: 2.5rem;
+  padding: 4rem 1.5rem 3rem;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -13,18 +13,19 @@
 /* Portrait column: profile photo next to the terminal */
 .hero-portrait {
   flex: 0 0 auto;
-  width: 280px;
-  height: 280px;
-  border-radius: 16px;
+  width: 300px;
+  border-radius: 20px;
   overflow: hidden;
-  border: 2px solid var(--primary, #14b8a6);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 0 4px rgba(20, 184, 166, 0.12);
+  border: 1px solid rgba(20, 184, 166, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  background: #0b1120;
 }
 
 .hero-portrait img {
   display: block;
   width: 100%;
   height: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
@@ -36,13 +37,13 @@
 @media (max-width: 900px) {
   .terminal-hero {
     flex-direction: column-reverse;
-    gap: 2rem;
-    padding: 3rem 1rem 2.5rem;
+    align-items: center;
+    gap: 1.75rem;
+    padding: 2.5rem 1rem 2rem;
   }
 
   .hero-portrait {
-    width: 200px;
-    height: 200px;
+    width: 220px;
   }
 }
 
