@@ -1,17 +1,17 @@
 /* Teal accent color variables for PaperMod customization */
 
 :root {
-  /* Primary teal accents */
-  --primary: #14b8a6;
-  --primary-dark: #008080;
-  --primary-light: #2dd4bf;
-  --primary-glow: rgba(20, 184, 166, 0.3);
+  /* Primary accent: terminal green */
+  --primary: #4ade80;
+  --primary-dark: #16a34a;
+  --primary-light: #86efac;
+  --primary-glow: rgba(74, 222, 128, 0.3);
 
-  /* Dark background palette */
-  --bg-base: #0f172a;
-  --bg-surface: #1e293b;
-  --bg-elevated: #334155;
-  --bg-hover: #475569;
+  /* Dark background palette (warmer graphite) */
+  --bg-base: #0b0f0c;
+  --bg-surface: #131a15;
+  --bg-elevated: #1f2b22;
+  --bg-hover: #2c3d31;
 
   /* Text colors */
   --text-primary: #e2e8f0;
@@ -19,24 +19,24 @@
   --text-muted: #64748b;
 
   /* Borders */
-  --border: #334155;
-  --border-light: #475569;
+  --border: #1f2b22;
+  --border-light: #2c3d31;
 
   /* Code */
   --code-bg: #1e293b;
   --code-text: #e2e8f0;
 
   /* Links */
-  --link: #14b8a6;
-  --link-hover: #2dd4bf;
+  --link: #4ade80;
+  --link-hover: #86efac;
 
   /* Override PaperMod defaults */
-  --theme: #0f172a;
-  --entry: #1e293b;
-  --primary: #14b8a6;
-  --secondary: #334155;
-  --tertiary: #475569;
+  --theme: #0b0f0c;
+  --entry: #131a15;
+  --primary: #4ade80;
+  --secondary: #1f2b22;
+  --tertiary: #2c3d31;
   --content: #e2e8f0;
-  --hljs-bg: #1e293b;
-  --code-bg: #1e293b;
+  --hljs-bg: #131a15;
+  --code-bg: #131a15;
 }

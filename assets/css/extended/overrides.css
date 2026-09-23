@@ -271,3 +271,19 @@
     font-size: 14px;
   }
 }
+
+
+/* Headings use mono accent colour */
+.post-title,
+.entry-header h2 a,
+.page-header h1 {
+  color: var(--text-primary);
+}
+
+/* Wider layout on desktop: PaperMod defaults are 1024/720 (too narrow/centered) */
+@media (min-width: 1024px) {
+  :root {
+    --nav-width: 1280px;
+    --main-width: 1100px;
+  }
+}
