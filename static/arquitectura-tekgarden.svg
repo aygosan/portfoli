@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="tit desc">
+  <title id="tit">Arquitectura conceptual d'un homelab</title>
+  <desc id="desc">Diagrama conceptual: repositori Git, operador GitOps, Kubernetes i Docker sobre plataforma de virtualització, amb ingress, DNS intern i observabilitat.</desc>
+
+  <defs>
+    <marker id="fletxa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4ade80"/>
+    </marker>
+  </defs>
+
+  <!-- Fons -->
+  <rect x="0" y="0" width="1200" height="700" fill="#0b0f0c"/>
+
+  <!-- Connectors (detràs de les caixes) -->
+  <g fill="none" stroke="#4ade80" stroke-width="2">
+    <!-- Git -> GitOps -->
+    <path d="M200,204 L200,276" marker-end="url(#fletxa)"/>
+    <!-- GitOps -> Kubernetes -->
+    <path d="M330,300 L390,300 L390,170 L456,170" marker-end="url(#fletxa)"/>
+    <!-- GitOps -> Docker -->
+    <path d="M330,330 L456,330" marker-end="url(#fletxa)"/>
+    <!-- Ingress -> Kubernetes -->
+    <path d="M880,170 L756,170" marker-end="url(#fletxa)"/>
+    <!-- Ingress -> Docker -->
+    <path d="M880,196 L830,196 L830,330 L756,330" marker-end="url(#fletxa)"/>
+    <!-- DNS -> Ingress -->
+    <path d="M1010,296 L1010,216" marker-end="url(#fletxa)"/>
+    <!-- Usuaris -> Ingress -->
+    <path d="M1010,72 L1010,126" marker-end="url(#fletxa)"/>
+  </g>
+  <g fill="none" stroke="#4ade80" stroke-width="2" stroke-dasharray="6 5" opacity="0.85">
+    <!-- Kubernetes -> Observabilitat -->
+    <path d="M750,206 L866,206 L866,470 L874,470" marker-end="url(#fletxa)"/>
+    <!-- Docker -> Observabilitat -->
+    <path d="M750,356 L830,356 L830,512 L874,512" marker-end="url(#fletxa)"/>
+    <!-- Docker -> Virtualització -->
+    <path d="M605,386 L605,582" marker-end="url(#fletxa)"/>
+    <!-- Observabilitat -> Virtualització -->
+    <path d="M1010,546 L1010,582" marker-end="url(#fletxa)"/>
+  </g>
+
+  <!-- Etiquetes de fletxes -->
+  <g font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#4ade80">
+    <text x="212" y="246">sincronització</text>
+    <text x="400" y="246">desplega</text>
+    <text x="818" y="158" text-anchor="middle">encamina</text>
+    <text x="1022" y="262">resol noms</text>
+    <text x="620" y="432" opacity="0.8">mètriques · registres</text>
+    <text x="617" y="502" opacity="0.8">s'executa sobre</text>
+  </g>
+  <text x="1010" y="62" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">usuaris</text>
+
+  <!-- Caixes -->
+  <g stroke="#2c3d31" stroke-width="1.5" fill="#131a15">
+    <rect x="70" y="130" width="260" height="70" rx="10"/>
+    <rect x="70" y="280" width="260" height="70" rx="10"/>
+    <rect x="460" y="130" width="290" height="80" rx="10" stroke="#4ade80" stroke-width="2"/>
+    <rect x="460" y="300" width="290" height="80" rx="10"/>
+    <rect x="880" y="130" width="260" height="80" rx="10"/>
+    <rect x="880" y="300" width="260" height="70" rx="10"/>
+    <rect x="880" y="460" width="260" height="80" rx="10"/>
+    <rect x="70" y="586" width="1060" height="64" rx="10"/>
+  </g>
+
+  <!-- Text de les caixes -->
+  <g text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="200" y="161" font-size="17" font-weight="600" fill="#e2e8f0">Repositori Git</text>
+    <text x="200" y="333" font-size="17" font-weight="600" fill="#e2e8f0">Operador GitOps</text>
+    <text x="605" y="164" font-size="17" font-weight="600" fill="#4ade80">Kubernetes</text>
+    <text x="605" y="334" font-size="17" font-weight="600" fill="#e2e8f0">Docker</text>
+    <text x="1010" y="164" font-size="16" font-weight="600" fill="#e2e8f0">Ingress / Reverse proxy</text>
+    <text x="1010" y="331" font-size="17" font-weight="600" fill="#e2e8f0">DNS intern</text>
+    <text x="1010" y="492" font-size="17" font-weight="600" fill="#e2e8f0">Observabilitat</text>
+    <text x="600" y="612" font-size="17" font-weight="600" fill="#e2e8f0">Plataforma de virtualització (Proxmox)</text>
+  </g>
+  <g text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">
+    <text x="200" y="183">infraestructura com a codi</text>
+    <text x="200" y="355">sincronització contínua</text>
+    <text x="605" y="190">clúster de nodes</text>
+    <text x="605" y="360">serveis containeritzats</text>
+    <text x="1010" y="190">entrada de trànsit · TLS</text>
+    <text x="1010" y="353">resolució de noms interna</text>
+    <text x="1010" y="512">mètriques i taules</text>
+    <text x="1010" y="530" fill="#64748b">Prometheus · Grafana</text>
+    <text x="600" y="634">màquines virtuals · emmagatzematge compartit</text>
+  </g>
+
+  <!-- Títol -->
+  <text x="600" y="54" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="650" fill="#e2e8f0">Arquitectura conceptual d'un homelab</text>
+  <text x="600" y="80" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="13" fill="#94a3b8">flux GitOps · contenidors · ingress · DNS · observabilitat</text>
+
+  <!-- Peu: llegenda i nota -->
+  <g font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">
+    <line x1="70" y1="672" x2="98" y2="672" stroke="#4ade80" stroke-width="2"/>
+    <text x="106" y="676">desplegament · trànsit</text>
+    <line x1="300" y1="672" x2="328" y2="672" stroke="#4ade80" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="336" y="676">mètriques · execució</text>
+  </g>
+  <text x="1130" y="676" text-anchor="end" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="11" fill="#64748b">Diagrama conceptual - sense dades de xarxa ni noms interns</text>
+</svg>

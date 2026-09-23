@@ -8,6 +8,12 @@ draft: false
 
 Mapa de alto nivel de cómo la plataforma TekGarden conecta la infraestructura on-premise, el edge cloud y el acceso remoto.
 
+### Diagrama conceptual
+
+Versión simplificada del flujo completo: del repositorio Git a la observabilidad, pasando por el operador GitOps, Kubernetes y Docker, sobre la plataforma de virtualización (Proxmox).
+
+![Arquitectura conceptual de TekGarden](/arquitectura-tekgarden.svg)
+
 ### Visión de red
 
 {{< mermaid >}}
