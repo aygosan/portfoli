@@ -8,7 +8,7 @@ draft: false
 
 <img src="/img/profile.jpg" alt="Santiago Ramis" style="float:right; width:200px; height:200px; border-radius:14px; margin:0 0 1rem 1.5rem; object-fit:cover;" />
 
-Sóc Santiago Ramis, enginyer de Plataforma amb seu a Palma, Mallorca (Espanya) i més de 20 anys d'experiència en IT. Actualment està enfocat en Kubernetes, GitOps i automatització d'infraestructura a la indústria de l'automoció.
+Sóc Santiago Ramis, enginyer de Plataforma de Puigpunyent, Mallorca (Espanya) i més de 20 anys d'experiència en IT. Actualment està enfocat en Kubernetes, GitOps i automatització d'infraestructura a la indústria de l'automoció.
 
 - **Volkswagen Digital:Hub**: Platform Engineer, OpenShift i GitOps amb ArgoCD (Oct 2023–Actualitat)
 - **Dare Planet Technology · Adidas**: Platform Engineer, pipelines CI/CD, infraestructura cloud (Nov 2021–Oct 2023)
@@ -52,7 +52,7 @@ Funciono millor en equips petits i d'alt impacte on l'ownership i l'autonomia im
 - **Família**: La meva família és el més important que tinc a la vida, així que intento passar tot el temps lliure que puc amb la meva dona i les meves dues filles petites.
 - **Música**: M'agrada molt el rock i vaig tocar la bateria amb un grup fins al 2020. Encara tinc la bateria a casa i hi caic de tant en tant.
 - **Anime i manga**: En soc un gran fan, sobretot de la ciència-ficció i el thriller psicològic. Steins;Gate és una de les meves obres de referència.
-- **Bàsquet**: Segueixo la NBA i m'agrada jugar-hi quan puc, tot i que les cames ja no tenen vint anys.
+- **Esports**: Jugo a futbol sala i, de tant en tant, a bàsquet, tot i que les cames ja no tenen vint anys.
 - **Bricolatge**: M'ho passo bé arreglant i muntant coses a casa. Del cablejat a la fusta, qualsevol excusa per agafar les eines.
 
 ### Filosofia de feina

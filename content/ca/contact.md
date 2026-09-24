@@ -6,7 +6,7 @@ draft: false
 
 ## Contacta'm
 
-**Ubicació:** Palma, Mallorca (Espanya)
+**Ubicació:** Puigpunyent, Mallorca (Espanya)
 **Disponibilitat:** Remot / Híbrid
 
 - **LinkedIn:** [linkedin.com/in/ramissan](https://linkedin.com/in/ramissan)

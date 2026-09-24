@@ -6,7 +6,7 @@ draft: false
 
 ## Get in Touch
 
-**Location:** Palma, Mallorca (Spain)
+**Location:** Puigpunyent, Mallorca (Spain)
 **Availability:** Remote / Hybrid
 
 - **LinkedIn:** [linkedin.com/in/ramissan](https://linkedin.com/in/ramissan)

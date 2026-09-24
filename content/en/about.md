@@ -8,7 +8,7 @@ draft: false
 
 <img src="/img/profile.jpg" alt="Santiago Ramis" style="float:right; width:200px; height:200px; border-radius:14px; margin:0 0 1rem 1.5rem; object-fit:cover;" />
 
-I'm Santiago Ramis, a Platform Engineer based in Palma, Mallorca (Spain) with 20+ years of experience in IT. I'm currently focused on Kubernetes, GitOps, and infrastructure automation in the automotive industry.
+I'm Santiago Ramis, a Platform Engineer based in Puigpunyent, Mallorca (Spain) with 20+ years of experience in IT. I'm currently focused on Kubernetes, GitOps, and infrastructure automation in the automotive industry.
 
 - **Volkswagen Digital:Hub**: Platform Engineer, OpenShift and GitOps with ArgoCD (Oct 2023–Present)
 - **Dare Planet Technology · Adidas**: Platform Engineer, CI/CD pipelines, cloud infrastructure (Nov 2021–Oct 2023)
@@ -52,7 +52,7 @@ I work best in small, high-impact teams where ownership and autonomy matter. I'm
 - **Family**: My family is the most important thing in my life, so I try to spend all my free time with my wife and our two young daughters.
 - **Music**: I love rock music and played drums in a band until 2020. I still have the drum kit at home and hit it every now and then.
 - **Anime & manga**: I'm a big fan, especially of science fiction and psychological thrillers. Steins;Gate is one of my reference works.
-- **Basketball**: I follow the NBA and play whenever I can, though my legs are no longer twenty.
+- **Sports**: I play indoor football (futsal) and, every now and then, basketball, though my legs are no longer twenty.
 - **DIY**: I enjoy fixing and building things around the house. From wiring to woodwork, any excuse to grab the tools.
 
 ### Work philosophy
