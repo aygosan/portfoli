@@ -7,7 +7,6 @@ Personal portfolio website built with Hugo and PaperMod theme.
 - **Hugo** — static site generator
 - **PaperMod** — theme (git submodule)
 - **Inter + JetBrains Mono** — typography
-- **Docker + nginx** — containerized serving
 - **Kubernetes + Traefik** — deployment target
 - **FluxCD** — GitOps deployment
 
@@ -62,8 +61,6 @@ FluxCD is the single source of truth for the cluster state.
 ├── layouts/           # Custom layouts (hero, index, partials)
 ├── assets/css/        # Custom CSS (colors, typography, terminal)
 ├── themes/PaperMod/   # Theme (git submodule)
-├── Dockerfile         # Multi-stage: Hugo build → nginx serve
-├── nginx.conf         # Nginx config
 ├── .github/workflows/ # CI/CD
 └── (no k8s/ — deployment via FluxCD in ramisclar/fluxcd)
 ```
