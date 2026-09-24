@@ -28,7 +28,8 @@
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
                     {{ site.Params.label.iconSVG | safeHTML }}
                 {{- end -}}
-                {{- $label_text -}}
+                {{- $parts := split $label_text ": " -}}
+                {{- if eq (len $parts) 2 -}}<span class="logo-name">{{ index $parts 0 }}</span><span class="logo-sub">{{ index $parts 1 }}</span>{{- else -}}{{- $label_text -}}{{- end -}}
             </a>
             {{- end }}
 
