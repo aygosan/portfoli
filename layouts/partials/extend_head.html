@@ -33,15 +33,32 @@
       });
     }
   });
-</script><script>
+</script>
+<script>
   (function () {
-    function initZoom() {
+    function initNav() {
+      var nav = document.querySelector('.header-nav');
+      var btn = document.querySelector('.nav-toggle');
+      if (!nav || !btn) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('nav-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    function initMermaidZoom() {
       var lb = document.createElement('div');
       lb.className = 'mermaid-lightbox';
       document.body.appendChild(lb);
-      function close() { lb.classList.remove('open'); lb.innerHTML = ''; }
+
+      function close() {
+        lb.classList.remove('open');
+        lb.innerHTML = '';
+      }
       lb.addEventListener('click', close);
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') close();
+      });
       document.addEventListener('click', function (e) {
         var m = e.target.closest('.mermaid');
         if (!m) return;
@@ -51,8 +68,13 @@
         lb.appendChild(svg.cloneNode(true));
         lb.classList.add('open');
       });
+
       var lang = document.documentElement.lang || 'ca';
-      var hints = { ca: 'clica per ampliar', en: 'click to expand', es: 'haz clic para ampliar' };
+      var hints = {
+        ca: 'clica per ampliar',
+        en: 'click to expand',
+        es: 'haz clic para ampliar'
+      };
       var text = hints[lang] || hints.ca;
       document.querySelectorAll('.mermaid').forEach(function (m) {
         var h = document.createElement('span');
@@ -61,21 +83,10 @@
         m.after(h);
       });
     }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initZoom);
-    } else {
-      initZoom();
-    }
-  })();
 
     function init() {
-      var nav = document.querySelector('.header-nav');
-      var btn = document.querySelector('.nav-toggle');
-      if (!nav || !btn) return;
-      btn.addEventListener('click', function () {
-        var open = nav.classList.toggle('nav-open');
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
+      initNav();
+      initMermaidZoom();
     }
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', init);
