@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="tit desc">
-  <title id="tit">Arquitectura conceptual d'un homelab</title>
+  <title id="tit">Arquitectura conceptual del Homelab</title>
   <desc id="desc">Diagrama conceptual: repositori Git, operador GitOps, Kubernetes i Docker sobre plataforma de virtualització, amb ingress, DNS intern i observabilitat.</desc>
 
   <defs>
@@ -87,7 +87,7 @@
   </g>
 
   <!-- Títol -->
-  <text x="600" y="54" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="650" fill="#e2e8f0">Arquitectura conceptual d'un homelab</text>
+  <text x="600" y="54" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="650" fill="#e2e8f0">Arquitectura conceptual del Homelab</text>
   <text x="600" y="80" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="13" fill="#94a3b8">flux GitOps · contenidors · ingress · DNS · observabilitat</text>
 
   <!-- Peu: llegenda i nota -->

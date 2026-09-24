@@ -87,7 +87,7 @@
   </g>
 
   <!-- Títol -->
-  <text x="600" y="54" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="650" fill="#e2e8f0">Arquitectura conceptual d'un homelab</text>
+  <text x="600" y="54" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="650" fill="#e2e8f0">Arquitectura conceptual del Homelab</text>
   <text x="600" y="80" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="13" fill="#94a3b8">flujo GitOps · contenedores · ingress · DNS · observabilidad</text>
 
   <!-- Peu: llegenda i nota -->

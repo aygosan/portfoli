@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="tit desc">
-  <title id="tit">Xarxa conceptual d'un homelab</title>
+  <title id="tit">Xarxa conceptual del Homelab</title>
   <desc id="desc">Diagrama conceptual: router gateway, switch-core L3, VLANs de gestió, usuaris, serveis i IoT, amb DNS, proxy, VPS perimetral i servidors, amb dades d'exemple.</desc>
 
   <defs>
@@ -120,7 +120,7 @@
   </g>
 
   <!-- Títol -->
-  <text x="600" y="44" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="650" fill="#e2e8f0">Xarxa conceptual d'un homelab</text>
+  <text x="600" y="44" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="650" fill="#e2e8f0">Xarxa conceptual del Homelab</text>
   <text x="600" y="70" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="13" fill="#94a3b8">segments VLAN · gateway · switch L3 · serveis interns · accés perimetral (dades d'exemple)</text>
 
   <!-- Peu: llegenda i nota -->

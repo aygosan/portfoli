@@ -120,7 +120,7 @@
   </g>
 
   <!-- Títol -->
-  <text x="600" y="44" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="650" fill="#e2e8f0">Xarxa conceptual d'un homelab</text>
+  <text x="600" y="44" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="650" fill="#e2e8f0">Conceptual network of the Homelab</text>
   <text x="600" y="70" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="13" fill="#94a3b8">VLAN segments · gateway · L3 switch · internal services · perimeter access (sample data)</text>
 
   <!-- Peu: llegenda i nota -->
