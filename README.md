@@ -8,7 +8,7 @@ Personal portfolio website built with Hugo and PaperMod theme.
 - **PaperMod** — theme (git submodule)
 - **Inter + JetBrains Mono** — typography
 - **Kubernetes + Traefik** — deployment target
-- **FluxCD** — GitOps deployment
+- **GitHub Actions + Pages** — CI/CD i hosting
 
 ## Languages
 
@@ -29,25 +29,11 @@ hugo server -D
 hugo --minify
 ```
 
-## Docker
-
-```bash
-docker build -t portfoli .
-docker run -p 8080:80 portfoli
-```
-
 ## Deploy
 
 Pushing to `main` triggers:
-1. Hugo build
-2. Docker image build → push to `ghcr.io/aygosan/portfoli`
-3. FluxCD detects new image and updates the deployment
-
-### Kubernetes (GitOps)
-
-Deployment is managed by **FluxCD** in the [`ramisclar/fluxcd`](https://github.com/ramisclar/fluxcd)
-repo — see `apps/components/hugo/`. There are no in-repo Kubernetes manifests;
-FluxCD is the single source of truth for the cluster state.
+1. Hugo build (GitHub Actions, `.github/workflows/static.yml`)
+2. Publish to GitHub Pages → https://santi.ramisclar.cat
 
 ## Structure
 
@@ -62,7 +48,7 @@ FluxCD is the single source of truth for the cluster state.
 ├── assets/css/        # Custom CSS (colors, typography, terminal)
 ├── themes/PaperMod/   # Theme (git submodule)
 ├── .github/workflows/ # CI/CD
-└── (no k8s/ — deployment via FluxCD in ramisclar/fluxcd)
+└── (hosting: GitHub Pages — no k8s/ ni contenidors)
 ```
 
 ## License
