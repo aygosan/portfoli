@@ -8,7 +8,7 @@ draft: false
 
 <img src="/img/profile.jpg" alt="Santiago Ramis" style="float:right; width:200px; height:200px; border-radius:14px; margin:0 0 1rem 1.5rem; object-fit:cover;" />
 
-Soy Santiago Ramis, ingeniero de Plataforma de Puigpunyent, Mallorca (España) y más de 20 años de experiencia en IT. Actualmente enfocado en Kubernetes, GitOps y automatización de infraestructura en la industria de la automoción.
+Soy Santiago Ramis, ingeniero de Plataforma, y vivo en un pueblo pequeño de Mallorca: Puigpunyent. Además, hace más de 20 años que empecé con lo que también ha sido mi hobby en el mundo de la informática. Actualmente enfocado en Kubernetes, GitOps y automatización de infraestructura en la industria de la automoción.
 
 - **Volkswagen Digital:Hub**: Ingeniero de Plataforma, OpenShift y GitOps con ArgoCD (Oct 2023–Actualidad)
 - **Dare Planet Technology · Adidas**: Ingeniero de Plataforma, pipelines CI/CD, infraestructura cloud (Nov 2021–Oct 2023)

@@ -8,7 +8,7 @@ draft: false
 
 <img src="/img/profile.jpg" alt="Santiago Ramis" style="float:right; width:200px; height:200px; border-radius:14px; margin:0 0 1rem 1.5rem; object-fit:cover;" />
 
-I'm Santiago Ramis, a Platform Engineer based in Puigpunyent, Mallorca (Spain) with 20+ years of experience in IT. I'm currently focused on Kubernetes, GitOps, and infrastructure automation in the automotive industry.
+I'm Santiago Ramis, a Platform Engineer, and I live in a small village in Mallorca: Puigpunyent. I got started in IT over 20 years ago, with what has also been my hobby in the world of computing. I'm currently focused on Kubernetes, GitOps, and infrastructure automation in the automotive industry.
 
 - **Volkswagen Digital:Hub**: Platform Engineer, OpenShift and GitOps with ArgoCD (Oct 2023–Present)
 - **Dare Planet Technology · Adidas**: Platform Engineer, CI/CD pipelines, cloud infrastructure (Nov 2021–Oct 2023)
