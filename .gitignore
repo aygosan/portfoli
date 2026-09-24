@@ -18,4 +18,4 @@ Thumbs.db
 .env.local
 
 # Docker
-*.tar
+*.tarnode_modules/
