@@ -23,62 +23,79 @@ Topologia de xarxa d'exemple: VLANs separades per gestió, usuaris, serveis i Io
 ### Visió de xarxa
 
 {{< mermaid >}}
-graph TB
+
+flowchart TB
+    classDef ext fill:#1f2937,stroke:#9ca3af,color:#f9fafb,stroke-width:1px
+    classDef edge fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px
+    classDef fw fill:#3b1d1d,stroke:#f87171,color:#fee2e2,stroke-width:1px
+    classDef onprem fill:#0f2a1d,stroke:#4ade80,color:#dcfce7,stroke-width:1px
+    classDef sec fill:#2a1f0f,stroke:#fbbf24,color:#fef3c7,stroke-width:1px
+    classDef off fill:#1f1f1f,stroke:#6b7280,color:#d1d5db,stroke-width:1px,stroke-dasharray:4 3
+
     subgraph Internet["Internet"]
-        USER["Usuaris"]
-        REMOTE["Portàtils / Mòbil<br/>WireGuard road warrior"]
+        USER["Usuaris<br/>navegador"]
+        REMOTE["Portàtils / mòbil<br/>WireGuard road warrior"]
     end
 
-    subgraph Cloud["Edge Cloud · VPS Hetzner"]
-        PANGOLIN["Pangolin<br/>Gateway zero-trust"]
-        FORGEJO["Forgejo<br/>Git self-hosted + CI<br/>només xarxa privada"]
+    subgraph Edge["Edge Cloud · VPS Hetzner"]
+        CF["Cloudflare<br/>DNS + CDN + WAF"]
+        PANGOLIN["Pangolin<br/>gateway zero-trust"]
+        FORGEJO["Forgejo<br/>Git + CI<br/>xarxa privada"]
     end
 
     subgraph OnPrem["On-Prem · Homelab"]
-        PFSENSE["Router pfSense<br/>Regles firewall + WireGuard road warrior<br/>Obert només: DNS, Traefik QNAP, Traefik k3s"]
-        PROXMOX["Clúster Proxmox VE<br/>2 nodes + QDevice"]
-        K8S["Kubernetes (k3s)<br/>2 clústers HA<br/>prod + staging"]
-        QNAP["QNAP NAS<br/>Docker + Backrest backups<br/>+ Traefik (ingress Docker)"]
-        PBS["Proxmox PBS<br/>Backups locals → sync B2"]
-        SECRETS["Secrets<br/>1Password + SOPS/age<br/>+ Kyverno"]
+        PFSENSE["Router pfSense<br/>firewall + WireGuard<br/>només: DNS, Traefik QNAP, Traefik k3s"]
+        PROXMOX["Proxmox VE<br/>2 nodes + QDevice"]
+        K8S["k3s<br/>2 clústers HA<br/>prod + staging"]
+        QNAP["QNAP NAS<br/>Docker + Backrest"]
+        TRAEFIK_K["Traefik k3s<br/>+ CrowdSec"]
+        TRAEFIK_Q["Traefik QNAP<br/>+ CrowdSec"]
+        PBS["Proxmox PBS<br/>backups locals"]
     end
 
-    subgraph External["Serveis externs"]
-        CF["Cloudflare<br/>DNS + CDN"]
-        B2["Backblaze B2<br/>Backups off-site"]
-        ONEPW["1Password<br/>Vault de secrets"]
-        TG["Telegram<br/>Alertes"]
+    subgraph Ext["Serveis externs"]
+        B2["Backblaze B2<br/>off-site"]
+        ONEPW["1Password<br/>vault de secrets"]
+        TG["Telegram<br/>alertes"]
     end
 
-    subgraph Offline["Offline"]
-        EXTDISK["Disc extern<br/>Còpia setmanal offline"]
+    subgraph Off["Offline"]
+        EXTDISK["Disc extern<br/>còpia setmanal"]
     end
 
+    CF -->|túnel| PANGOLIN
     USER -->|HTTPS| CF
-    CF -->|Túnel| PANGOLIN
-    PANGOLIN -->|Zero-trust| PFSENSE
-    PFSENSE -->|DNS + Traefik només| QNAP
-    PFSENSE -->|DNS + Traefik només| K8S
-    PFSENSE --> PROXMOX
-    PROXMOX --> K8S
-    PROXMOX --> QNAP
+    PANGOLIN -->|zero-trust| PFSENSE
 
-    REMOTE -.->|WireGuard VPN| PFSENSE
+    PFSENSE -->|ingress| TRAEFIK_Q
+    PFSENSE -->|ingress| TRAEFIK_K
+    TRAEFIK_Q --> QNAP
+    TRAEFIK_K --> K8S
+
+    REMOTE -.->|VPN WireGuard| PFSENSE
     PFSENSE -.->|xarxa privada| FORGEJO
     PANGOLIN -.->|accés extern opcional| FORGEJO
 
     FORGEJO -.->|GitOps pull| K8S
     FORGEJO -.->|CI deploy| QNAP
 
+    PROXMOX --> K8S
+    PROXMOX --> QNAP
     PBS -.->|backup local| PROXMOX
     PBS -.->|sync| B2
     QNAP -.->|Backrest local| QNAP
-    QNAP -.->|Backrest → B2| B2
+    QNAP -.->|Backrest| B2
     QNAP -.->|setmanal| EXTDISK
 
-    K8S --> SECRETS
-    SECRETS -.->|op inject| ONEPW
+    K8S -.->|op inject| ONEPW
     K8S -.->|alertes| TG
+
+    class USER,REMOTE ext
+    class CF,PANGOLIN,FORGEJO edge
+    class PFSENSE fw
+    class PROXMOX,K8S,QNAP,TRAEFIK_K,TRAEFIK_Q,PBS onprem
+    class B2,ONEPW,TG sec
+    class EXTDISK off
 {{< /mermaid >}}
 
 ### Descripció del flux
