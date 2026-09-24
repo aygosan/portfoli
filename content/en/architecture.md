@@ -23,65 +23,58 @@ Sample network topology: VLANs separated for management, users, services and IoT
 ### Network Overview
 
 {{< mermaid >}}
+%%{init: {"flowchart": {"nodeSpacing": 35, "rankSpacing": 40, "wrappingWidth": 180}} }%%
 flowchart TB
-
     subgraph Internet["Internet"]
-        USER["Usuaris<br/>navegador"]
-        REMOTE["Portàtils / mòbil<br/>WireGuard road warrior"]
+        USER["Users<br/>browser"]
+        REMOTE["Laptops / mobile<br/>WireGuard road warrior"]
     end
 
-    subgraph Edge["Edge Cloud · VPS Hetzner"]
+    subgraph Edge["Edge Cloud · Hetzner VPS"]
         CF["Cloudflare<br/>DNS + CDN + WAF"]
-        PANGOLIN["Pangolin<br/>gateway zero-trust"]
-        FORGEJO["Forgejo<br/>Git + CI<br/>xarxa privada"]
+        PANGOLIN["Pangolin<br/>zero-trust gateway"]
+        FORGEJO["Forgejo<br/>Git · CI · private network"]
     end
 
     subgraph OnPrem["On-Prem · Homelab"]
-        PFSENSE["Router pfSense<br/>firewall + WireGuard<br/>només: DNS, Traefik QNAP, Traefik k3s"]
+        PFSENSE["pfSense Router<br/>firewall + WireGuard"]
+        TRAEFIK_Q["QNAP Traefik<br/>+ CrowdSec"]
+        TRAEFIK_K["k3s Traefik<br/>+ CrowdSec"]
+        QNAP["QNAP NAS<br/>Docker · Backrest"]
+        K8S["k3s<br/>2 clusters · prod + staging"]
         PROXMOX["Proxmox VE<br/>2 nodes + QDevice"]
-        K8S["k3s<br/>2 clústers HA<br/>prod + staging"]
-        QNAP["QNAP NAS<br/>Docker + Backrest"]
-        TRAEFIK_K["Traefik k3s<br/>+ CrowdSec"]
-        TRAEFIK_Q["Traefik QNAP<br/>+ CrowdSec"]
-        PBS["Proxmox PBS<br/>backups locals"]
+        PBS["Proxmox PBS<br/>local backups"]
     end
 
-    subgraph Ext["Serveis externs"]
-        B2["Backblaze B2<br/>off-site"]
-        ONEPW["1Password<br/>vault de secrets"]
-        TG["Telegram<br/>alertes"]
+    subgraph Ext["External services"]
+        B2["Backblaze B2<br/>off-site backups"]
+        ONEPW["1Password<br/>secrets vault"]
+        TG["Telegram<br/>alerts"]
+        EXTDISK["External disk<br/>weekly copy"]
     end
 
-    subgraph Off["Offline"]
-        EXTDISK["Disc extern<br/>còpia setmanal"]
-    end
-
-    CF -->|túnel| PANGOLIN
     USER -->|HTTPS| CF
+    CF -->|tunnel| PANGOLIN
     PANGOLIN -->|zero-trust| PFSENSE
+    REMOTE -.->|WireGuard VPN| PFSENSE
 
     PFSENSE -->|ingress| TRAEFIK_Q
     PFSENSE -->|ingress| TRAEFIK_K
     TRAEFIK_Q --> QNAP
     TRAEFIK_K --> K8S
+    PROXMOX --> K8S
+    PROXMOX --> QNAP
 
-    REMOTE -.->|VPN WireGuard| PFSENSE
-    PFSENSE -.->|xarxa privada| FORGEJO
-    PANGOLIN -.->|accés extern opcional| FORGEJO
-
+    PANGOLIN -.->|optional external access| FORGEJO
     FORGEJO -.->|GitOps pull| K8S
     FORGEJO -.->|CI deploy| QNAP
 
-    PROXMOX --> K8S
-    PROXMOX --> QNAP
-    PBS -.->|backup local| PROXMOX
+    PBS -.->|local backup| PROXMOX
     PBS -.->|sync| B2
-    QNAP -.->|Backrest local| QNAP
-    QNAP -.->|Backrest| B2
-    QNAP -.->|setmanal| EXTDISK
-
+    QNAP -.->|backups| B2
+    QNAP -.->|weekly| EXTDISK
     K8S -.->|op inject| ONEPW
-    K8S -.->|alertes| TG
+    K8S -.->|alerts| TG
 {{< /mermaid >}}
 
 

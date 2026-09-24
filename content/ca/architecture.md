@@ -23,8 +23,8 @@ Topologia de xarxa d'exemple: VLANs separades per gestió, usuaris, serveis i Io
 ### Visió de xarxa
 
 {{< mermaid >}}
+%%{init: {"flowchart": {"nodeSpacing": 35, "rankSpacing": 40, "wrappingWidth": 180}} }%%
 flowchart TB
-
     subgraph Internet["Internet"]
         USER["Usuaris<br/>navegador"]
         REMOTE["Portàtils / mòbil<br/>WireGuard road warrior"]
@@ -33,53 +33,46 @@ flowchart TB
     subgraph Edge["Edge Cloud · VPS Hetzner"]
         CF["Cloudflare<br/>DNS + CDN + WAF"]
         PANGOLIN["Pangolin<br/>gateway zero-trust"]
-        FORGEJO["Forgejo<br/>Git + CI<br/>xarxa privada"]
+        FORGEJO["Forgejo<br/>Git · CI · xarxa privada"]
     end
 
     subgraph OnPrem["On-Prem · Homelab"]
-        PFSENSE["Router pfSense<br/>firewall + WireGuard<br/>només: DNS, Traefik QNAP, Traefik k3s"]
-        PROXMOX["Proxmox VE<br/>2 nodes + QDevice"]
-        K8S["k3s<br/>2 clústers HA<br/>prod + staging"]
-        QNAP["QNAP NAS<br/>Docker + Backrest"]
-        TRAEFIK_K["Traefik k3s<br/>+ CrowdSec"]
+        PFSENSE["Router pfSense<br/>firewall + WireGuard"]
         TRAEFIK_Q["Traefik QNAP<br/>+ CrowdSec"]
+        TRAEFIK_K["Traefik k3s<br/>+ CrowdSec"]
+        QNAP["QNAP NAS<br/>Docker · Backrest"]
+        K8S["k3s<br/>2 clústers · prod + staging"]
+        PROXMOX["Proxmox VE<br/>2 nodes + QDevice"]
         PBS["Proxmox PBS<br/>backups locals"]
     end
 
     subgraph Ext["Serveis externs"]
-        B2["Backblaze B2<br/>off-site"]
+        B2["Backblaze B2<br/>backups off-site"]
         ONEPW["1Password<br/>vault de secrets"]
         TG["Telegram<br/>alertes"]
-    end
-
-    subgraph Off["Offline"]
         EXTDISK["Disc extern<br/>còpia setmanal"]
     end
 
-    CF -->|túnel| PANGOLIN
     USER -->|HTTPS| CF
+    CF -->|túnel| PANGOLIN
     PANGOLIN -->|zero-trust| PFSENSE
+    REMOTE -.->|VPN WireGuard| PFSENSE
 
     PFSENSE -->|ingress| TRAEFIK_Q
     PFSENSE -->|ingress| TRAEFIK_K
     TRAEFIK_Q --> QNAP
     TRAEFIK_K --> K8S
+    PROXMOX --> K8S
+    PROXMOX --> QNAP
 
-    REMOTE -.->|VPN WireGuard| PFSENSE
-    PFSENSE -.->|xarxa privada| FORGEJO
     PANGOLIN -.->|accés extern opcional| FORGEJO
-
     FORGEJO -.->|GitOps pull| K8S
     FORGEJO -.->|CI deploy| QNAP
 
-    PROXMOX --> K8S
-    PROXMOX --> QNAP
     PBS -.->|backup local| PROXMOX
     PBS -.->|sync| B2
-    QNAP -.->|Backrest local| QNAP
-    QNAP -.->|Backrest| B2
+    QNAP -.->|backups| B2
     QNAP -.->|setmanal| EXTDISK
-
     K8S -.->|op inject| ONEPW
     K8S -.->|alertes| TG
 {{< /mermaid >}}

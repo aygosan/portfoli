@@ -23,65 +23,58 @@ Topología de red de ejemplo: VLANs separadas para gestión, usuarios, servicios
 ### Visión de red
 
 {{< mermaid >}}
+%%{init: {"flowchart": {"nodeSpacing": 35, "rankSpacing": 40, "wrappingWidth": 180}} }%%
 flowchart TB
-
     subgraph Internet["Internet"]
-        USER["Usuaris<br/>navegador"]
-        REMOTE["Portàtils / mòbil<br/>WireGuard road warrior"]
+        USER["Usuarios<br/>navegador"]
+        REMOTE["Portátiles / móvil<br/>WireGuard road warrior"]
     end
 
     subgraph Edge["Edge Cloud · VPS Hetzner"]
         CF["Cloudflare<br/>DNS + CDN + WAF"]
         PANGOLIN["Pangolin<br/>gateway zero-trust"]
-        FORGEJO["Forgejo<br/>Git + CI<br/>xarxa privada"]
+        FORGEJO["Forgejo<br/>Git · CI · red privada"]
     end
 
     subgraph OnPrem["On-Prem · Homelab"]
-        PFSENSE["Router pfSense<br/>firewall + WireGuard<br/>només: DNS, Traefik QNAP, Traefik k3s"]
-        PROXMOX["Proxmox VE<br/>2 nodes + QDevice"]
-        K8S["k3s<br/>2 clústers HA<br/>prod + staging"]
-        QNAP["QNAP NAS<br/>Docker + Backrest"]
-        TRAEFIK_K["Traefik k3s<br/>+ CrowdSec"]
+        PFSENSE["Router pfSense<br/>firewall + WireGuard"]
         TRAEFIK_Q["Traefik QNAP<br/>+ CrowdSec"]
-        PBS["Proxmox PBS<br/>backups locals"]
+        TRAEFIK_K["Traefik k3s<br/>+ CrowdSec"]
+        QNAP["QNAP NAS<br/>Docker · Backrest"]
+        K8S["k3s<br/>2 clústeres · prod + staging"]
+        PROXMOX["Proxmox VE<br/>2 nodos + QDevice"]
+        PBS["Proxmox PBS<br/>backups locales"]
     end
 
-    subgraph Ext["Serveis externs"]
-        B2["Backblaze B2<br/>off-site"]
-        ONEPW["1Password<br/>vault de secrets"]
-        TG["Telegram<br/>alertes"]
+    subgraph Ext["Servicios externos"]
+        B2["Backblaze B2<br/>backups off-site"]
+        ONEPW["1Password<br/>vault de secretos"]
+        TG["Telegram<br/>alertas"]
+        EXTDISK["Disco externo<br/>copia semanal"]
     end
 
-    subgraph Off["Offline"]
-        EXTDISK["Disc extern<br/>còpia setmanal"]
-    end
-
-    CF -->|túnel| PANGOLIN
     USER -->|HTTPS| CF
+    CF -->|túnel| PANGOLIN
     PANGOLIN -->|zero-trust| PFSENSE
+    REMOTE -.->|VPN WireGuard| PFSENSE
 
     PFSENSE -->|ingress| TRAEFIK_Q
     PFSENSE -->|ingress| TRAEFIK_K
     TRAEFIK_Q --> QNAP
     TRAEFIK_K --> K8S
-
-    REMOTE -.->|VPN WireGuard| PFSENSE
-    PFSENSE -.->|xarxa privada| FORGEJO
-    PANGOLIN -.->|accés extern opcional| FORGEJO
-
-    FORGEJO -.->|GitOps pull| K8S
-    FORGEJO -.->|CI deploy| QNAP
-
     PROXMOX --> K8S
     PROXMOX --> QNAP
+
+    PANGOLIN -.->|acceso externo opcional| FORGEJO
+    FORGEJO -.->|pull GitOps| K8S
+    FORGEJO -.->|CI deploy| QNAP
+
     PBS -.->|backup local| PROXMOX
     PBS -.->|sync| B2
-    QNAP -.->|Backrest local| QNAP
-    QNAP -.->|Backrest| B2
-    QNAP -.->|setmanal| EXTDISK
-
+    QNAP -.->|backups| B2
+    QNAP -.->|semanal| EXTDISK
     K8S -.->|op inject| ONEPW
-    K8S -.->|alertes| TG
+    K8S -.->|alertas| TG
 {{< /mermaid >}}
 
 
