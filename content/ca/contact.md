@@ -11,6 +11,7 @@ draft: false
 
 - **LinkedIn:** [linkedin.com/in/ramissan](https://linkedin.com/in/ramissan)
 - **GitHub:** [github.com/aygosan](https://github.com/aygosan)
+- **CV (Manfred):** [perfil de Manfred](https://www.getmanfred.com/perfil/ramissan)
 - **Email:** [santi@ramisclar.cat](mailto:santi@ramisclar.cat)
 
 No dubteu a contactar-me sobre enginyeria de plataforma, DevOps, SRE o infraestructura homelab.

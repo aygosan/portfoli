@@ -58,6 +58,10 @@ defaultContentLanguageInSubdir = false
   url = "https://github.com/aygosan"
 
 [[params.socialIcons]]
+  name = "cv"
+  url = "https://www.getmanfred.com/perfil/ramissan"
+
+[[params.socialIcons]]
   name = "email"
   url = "mailto:santi@ramisclar.cat"
 
