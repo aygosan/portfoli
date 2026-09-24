@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="tit desc">
+  <title id="tit">Network overview: zero-trust access flow</title>
+  <desc id="desc">Access flow: users come in through Cloudflare; Pangolin (zero-trust gateway on the Hetzner VPS) tunnels to the pfSense router, which only allows internal DNS and the Traefik ingresses of QNAP and k3s, protected by CrowdSec. Remote access and GitOps run over wireguard and the private network. Backups to Backblaze B2, secrets with 1Password, alerts via Telegram.</desc>
+  <defs>
+    <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4ade80"/>
+    </marker>
+    <marker id="flg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="700" fill="#0b0f0c"/>
+
+  <!-- Connectors -->
+  <g fill="none" stroke="#4ade80" stroke-width="2">
+    <path d="M310,150 L358,150" marker-end="url(#fl)"/>
+    <path d="M635,150 L683,150" marker-end="url(#fl)"/>
+    <path d="M500,189 L500,245" marker-end="url(#fl)"/>
+    <path d="M500,331 L500,404" marker-end="url(#fl)"/>
+    <path d="M500,496 L500,562" marker-end="url(#fl)"/>
+    <path d="M500,496 L185,496 L185,562" marker-end="url(#fl)"/>
+  </g>
+  <g fill="none" stroke="#4ade80" stroke-width="2" stroke-dasharray="6 5" opacity="0.85">
+    <path d="M185,189 L185,288 L358,288" marker-end="url(#fl)"/>
+    <path d="M835,331 L835,450 L713,450" marker-end="url(#fl)"/>
+  </g>
+  <g fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="6 5" opacity="0.8">
+    <path d="M680,288 L835,288" marker-end="url(#flg)"/>
+    <path d="M910,620 L835,620" marker-end="url(#flg)"/>
+  </g>
+
+  <!-- Etiquetes de fletxa -->
+  <g font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#4ade80">
+    <text x="334" y="140" text-anchor="middle">HTTPS</text>
+    <text x="659" y="140" text-anchor="middle">name resolution</text>
+    <text x="512" y="222">túnel</text>
+    <text x="512" y="382">zero-trust</text>
+    <text x="512" y="530">ingress</text>
+    <text x="200" y="530">ingress</text>
+  </g>
+  <g font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#4ade80" opacity="0.85">
+    <text x="212" y="248">WireGuard VPN</text>
+    <text x="820" y="392" text-anchor="end">optional private access</text>
+  </g>
+  <g font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8" opacity="0.8">
+    <text x="757" y="278" text-anchor="middle">GitOps pull</text>
+    <text x="872" y="610" text-anchor="middle">op inject · alerts</text>
+  </g>
+
+  <!-- Caixes -->
+  <g stroke="#2c3d31" stroke-width="1.5" fill="#131a15">
+    <rect x="710" y="545" width="290" height="150" rx="12"/>
+  </g>
+  <rect x="60" y="111" width="250" height="78" rx="10" fill="#1f2b22" stroke="#2c3d31" stroke-width="1.5"/>
+  <text x="185" y="146" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#e2e8f0">Users</text>
+  <text x="185" y="172" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">browser · HTTPS</text>
+
+  <rect x="365" y="111" width="270" height="78" rx="10" fill="#1f2b22" stroke="#4ade80" stroke-width="2"/>
+  <text x="500" y="146" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#4ade80">Cloudflare</text>
+  <text x="500" y="172" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">DNS · CDN · WAF</text>
+
+  <rect x="690" y="111" width="290" height="78" rx="10" fill="#1f2b22" stroke="#2c3d31" stroke-width="1.5"/>
+  <text x="835" y="146" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#e2e8f0">DNS públic</text>
+  <text x="835" y="172" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">domini + registres</text>
+
+  <rect x="365" y="245" width="270" height="86" rx="10" fill="#1f2b22" stroke="#4ade80" stroke-width="2"/>
+  <text x="500" y="284" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#4ade80">Pangolin</text>
+  <text x="500" y="310" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">gateway zero-trust</text>
+
+  <rect x="690" y="245" width="290" height="86" rx="10" fill="#1f2b22" stroke="#2c3d31" stroke-width="1.5"/>
+  <text x="835" y="284" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#e2e8f0">Forgejo</text>
+  <text x="835" y="310" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">Git · CI · xarxa privada</text>
+
+  <rect x="295" y="404" width="410" height="92" rx="10" fill="#1f2b22" stroke="#4ade80" stroke-width="2"/>
+  <text x="500" y="446" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#4ade80">pfSense Router</text>
+  <text x="500" y="472" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">firewall · WireGuard · DNS</text>
+
+  <rect x="35" y="562" width="300" height="76" rx="10" fill="#1f2b22" stroke="#2c3d31" stroke-width="1.5"/>
+  <text x="185" y="596" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#e2e8f0">Traefik QNAP</text>
+  <text x="185" y="622" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">ingress · CrowdSec</text>
+
+  <rect x="350" y="562" width="300" height="76" rx="10" fill="#1f2b22" stroke="#2c3d31" stroke-width="1.5"/>
+  <text x="500" y="596" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#e2e8f0">Traefik k3s</text>
+  <text x="500" y="622" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">ingress · CrowdSec</text>
+
+  <rect x="710" y="574" width="250" height="44" rx="10" fill="#1f2b22" stroke="#2c3d31" stroke-width="1.5"/>
+  <text x="835" y="592" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600" fill="#e2e8f0">Backblaze B2</text>
+  <text x="835" y="618" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">off-site backups</text>
+
+  <rect x="710" y="624" width="250" height="44" rx="10" fill="#1f2b22" stroke="#2c3d31" stroke-width="1.5"/>
+  <text x="835" y="642" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600" fill="#e2e8f0">1Password</text>
+  <text x="835" y="668" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">secrets vault</text>
+
+  <rect x="710" y="674" width="250" height="44" rx="10" fill="#1f2b22" stroke="#2c3d31" stroke-width="1.5"/>
+  <text x="835" y="692" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600" fill="#e2e8f0">Telegram</text>
+  <text x="835" y="718" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">alerts</text>
+
+  <text x="855" y="585" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600" fill="#e2e8f0">External services</text>
+
+  <g font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">
+    <text x="60" y="655">— — — private access / backups (not exposed to the internet)</text>
+  </g>
+  <text x="60" y="40" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#64748b">zero-trust access flow · TekGarden</text>
+</svg>

@@ -12,17 +12,17 @@ Mapa de alto nivel de cómo la plataforma TekGarden conecta la infraestructura o
 
 Versión simplificada del flujo completo: del repositorio Git a la observabilidad, pasando por el operador GitOps, Kubernetes y Docker, sobre la plataforma de virtualización (Proxmox).
 
-![Arquitectura conceptual de TekGarden](/arquitectura-tekgarden.svg)
+![Arquitectura conceptual de TekGarden](/arquitectura-tekgarden-es.svg)
 
 ### Diagrama de red
 
 Topología de red de ejemplo: VLANs separadas para gestión, usuarios, servicios e IoT, con tronco VLAN hacia el switch L3 y segmentación de servicios para limitar el movimiento lateral.
 
-![Topología de red de ejemplo](/xarxa-exemple.svg)
+![Topología de red de ejemplo](/xarxa-exemple-es.svg)
 
 ### Visión de red
 
-![Visión de red: flujo de acceso zero-trust (Cloudflare, Pangolin, pfSense, Traefik)](/visio-xarxa-flux.svg)
+![Visión de red: flujo de acceso zero-trust (Cloudflare, Pangolin, pfSense, Traefik)](/visio-xarxa-flux-es.svg)
 
 ### Descripción del flujo
 

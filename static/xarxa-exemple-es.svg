@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="tit desc">
+  <title id="tit">Red conceptual de un homelab</title>
+  <desc id="desc">Diagrama conceptual: router gateway, switch-core L3, VLANs de gestión, usuarios, servicios e IoT, con DNS, proxy, VPS perimetral y servidores, con datos de ejemplo.</desc>
+
+  <defs>
+    <marker id="fletxa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4ade80"/>
+    </marker>
+  </defs>
+
+  <!-- Fons -->
+  <rect x="0" y="0" width="1200" height="760" fill="#0b0f0c"/>
+
+  <!-- Connectors principals (detràs de les caixes) -->
+  <g fill="none" stroke="#4ade80" stroke-width="2">
+    <!-- Internet -> router -->
+    <path d="M490,170 L490,219" marker-end="url(#fletxa)"/>
+    <!-- Usuaris -> switch-core -->
+    <path d="M180,170 L180,337 L412,337 L412,369" marker-end="url(#fletxa)"/>
+    <!-- router -> switch-core -->
+    <path d="M490,320 L490,369" marker-end="url(#fletxa)"/>
+    <!-- switch-core -> rail de VLANs -->
+    <path d="M490,456 L490,486"/>
+    <path d="M204,486 L996,486"/>
+    <!-- rail -> cada VLAN -->
+    <path d="M204,486 L204,507" marker-end="url(#fletxa)"/>
+    <path d="M468,486 L468,507" marker-end="url(#fletxa)"/>
+    <path d="M732,486 L732,507" marker-end="url(#fletxa)"/>
+    <path d="M996,486 L996,507" marker-end="url(#fletxa)"/>
+    <!-- VLAN Serveis -> servidors -->
+    <path d="M732,586 L732,611" marker-end="url(#fletxa)"/>
+  </g>
+  <g fill="none" stroke="#4ade80" stroke-width="2" stroke-dasharray="6 5" opacity="0.85">
+    <!-- DNS públic -> VPS -->
+    <path d="M1020,170 L1020,219" marker-end="url(#fletxa)"/>
+    <!-- VPS -> router (túnel) -->
+    <path d="M900,270 L631,270" marker-end="url(#fletxa)"/>
+  </g>
+
+  <!-- Etiquetes de fletxes -->
+  <g font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#4ade80">
+    <text x="502" y="200">enlaces WAN</text>
+    <text x="502" y="350">troncal VLAN</text>
+    <text x="1032" y="200" opacity="0.85">resuelve nombres</text>
+    <text x="765" y="260" text-anchor="middle" opacity="0.85">túnel VPN</text>
+  </g>
+  <text x="194" y="232" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">puertos de acceso</text>
+  <text x="742" y="604" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="11" fill="#94a3b8">servicios alojados</text>
+  <text x="216" y="478" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="11" fill="#64748b">distribución por VLAN (ejemplo)</text>
+
+  <!-- Caixes -->
+  <g stroke="#2c3d31" stroke-width="1.5" fill="#131a15">
+    <rect x="60" y="100" width="240" height="70" rx="10"/>
+    <rect x="360" y="100" width="260" height="70" rx="10"/>
+    <rect x="900" y="100" width="240" height="70" rx="10"/>
+    <rect x="900" y="220" width="240" height="100" rx="10"/>
+    <rect x="350" y="370" width="280" height="86" rx="10"/>
+  </g>
+  <rect x="350" y="220" width="280" height="100" rx="10" fill="#131a15" stroke="#4ade80" stroke-width="2"/>
+  <g stroke="#2c3d31" stroke-width="1.5" fill="#1f2b22">
+    <rect x="84" y="508" width="240" height="78" rx="10"/>
+    <rect x="348" y="508" width="240" height="78" rx="10"/>
+    <rect x="612" y="508" width="240" height="78" rx="10"/>
+    <rect x="876" y="508" width="240" height="78" rx="10"/>
+  </g>
+  <rect x="84" y="612" width="1032" height="88" rx="10" fill="#131a15" stroke="#2c3d31" stroke-width="1.5"/>
+  <g stroke="#2c3d31" stroke-width="1.5" fill="#1f2b22">
+    <rect x="118" y="646" width="180" height="44" rx="8"/>
+    <rect x="314" y="646" width="180" height="44" rx="8"/>
+    <rect x="510" y="646" width="180" height="44" rx="8"/>
+    <rect x="706" y="646" width="180" height="44" rx="8"/>
+    <rect x="902" y="646" width="180" height="44" rx="8"/>
+  </g>
+
+  <!-- Text de les caixes -->
+  <g text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="180" y="131" font-size="17" font-weight="600" fill="#e2e8f0">Usuarios</text>
+    <text x="490" y="131" font-size="17" font-weight="600" fill="#e2e8f0">Internet</text>
+    <text x="1020" y="131" font-size="17" font-weight="600" fill="#e2e8f0">DNS público</text>
+    <text x="490" y="252" font-size="17" font-weight="600" fill="#4ade80">router (gateway)</text>
+    <text x="1020" y="252" font-size="17" font-weight="600" fill="#e2e8f0">VPS perimetral</text>
+    <text x="490" y="402" font-size="17" font-weight="600" fill="#e2e8f0">switch-core (L3)</text>
+    <text x="118" y="636" text-anchor="start" font-size="14" font-weight="600" fill="#e2e8f0">Servidores (ejemplo)</text>
+    <text x="208" y="666" font-size="13" font-weight="600" fill="#e2e8f0">node-1</text>
+    <text x="404" y="666" font-size="13" font-weight="600" fill="#e2e8f0">node-2</text>
+    <text x="600" y="666" font-size="13" font-weight="600" fill="#e2e8f0">dns</text>
+    <text x="796" y="666" font-size="13" font-weight="600" fill="#e2e8f0">proxy</text>
+    <text x="992" y="666" font-size="13" font-weight="600" fill="#e2e8f0">nas</text>
+  </g>
+  <g text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">
+    <text x="180" y="153">ordenadores · móviles · WiFi</text>
+    <text x="490" y="153">salida a internet</text>
+    <text x="1020" y="153">example.com</text>
+    <text x="490" y="276">cortafuegos · DHCP · NAT</text>
+    <text x="490" y="296">gateway .1 por cada VLAN</text>
+    <text x="1020" y="276">edge.example.com</text>
+    <text x="1020" y="296">entrada remota · túnel</text>
+    <text x="490" y="424">troncal VLAN · SVI</text>
+    <text x="490" y="444">encaminamiento entre segmentos</text>
+    <text x="204" y="532" font-size="13" fill="#4ade80">VLAN 10 · Gestión</text>
+    <text x="204" y="552">172.16.10.0/24</text>
+    <text x="468" y="532" font-size="13" fill="#4ade80">VLAN 20 · Usuarios</text>
+    <text x="468" y="552">172.16.20.0/24</text>
+    <text x="732" y="532" font-size="13" fill="#4ade80">VLAN 30 · Servicios</text>
+    <text x="732" y="552">172.16.30.0/24</text>
+    <text x="996" y="532" font-size="13" fill="#4ade80">VLAN 40 · IoT</text>
+    <text x="996" y="552">172.16.40.0/24</text>
+    <text x="208" y="681" font-size="11">virtual · contenedores</text>
+    <text x="404" y="681" font-size="11">virtual · contenedores</text>
+    <text x="600" y="681" font-size="11">intern.example.com</text>
+    <text x="796" y="681" font-size="11">entrada TLS · 443</text>
+    <text x="992" y="681" font-size="11">almacenamiento</text>
+  </g>
+  <g text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1">
+    <text x="204" y="574">gestión de equipos</text>
+    <text x="468" y="574">clientes y oficina</text>
+    <text x="732" y="574">dns · proxy · datos</text>
+    <text x="996" y="574">domótica y sensores</text>
+  </g>
+
+  <!-- Títol -->
+  <text x="600" y="44" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="650" fill="#e2e8f0">Xarxa conceptual d'un homelab</text>
+  <text x="600" y="70" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="13" fill="#94a3b8">segmentos VLAN · gateway · switch L3 · servicios internos · acceso perimetral (datos de ejemplo)</text>
+
+  <!-- Peu: llegenda i nota -->
+  <g font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">
+    <line x1="70" y1="740" x2="98" y2="740" stroke="#4ade80" stroke-width="2"/>
+    <text x="106" y="744">tráfico · troncal VLAN</text>
+    <line x1="300" y1="740" x2="328" y2="740" stroke="#4ade80" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="336" y="744">túnel VPN · resolución de nombres</text>
+  </g>
+  <text x="1130" y="744" text-anchor="end" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="11" fill="#64748b">datos ficticios de ejemplo · ninguna información real</text>
+</svg>

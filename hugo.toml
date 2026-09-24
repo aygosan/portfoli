@@ -62,9 +62,21 @@ defaultContentLanguageInSubdir = false
   url = "mailto:santi@ramisclar.cat"
 
 # Home page profile
-[params.homeInfoParams]
+[params.homeInfoParams]  # fallback global
   Title = "Santiago Ramis"
-  Content = "Platform Engineer amb més de 20 anys d'experiència en IT. Actualment enfocat en Kubernetes, GitOps i automatització d'infraestructura. Construeixo i opero TekGarden, un homelab convertit en plataforma de producció."
+  Content = "Enginyer de Plataforma amb més de 20 anys d'experiència en IT. Actualment enfocat en Kubernetes, GitOps i automatització d'infraestructura. Construeixo i opero TekGarden, un homelab convertit en plataforma de producció."
+
+[languages.ca.params.homeInfoParams]
+  Title = "Santiago Ramis"
+  Content = "Enginyer de Plataforma amb més de 20 anys d'experiència en IT. Actualment enfocat en Kubernetes, GitOps i automatització d'infraestructura. Construeixo i opero TekGarden, un homelab convertit en plataforma de producció."
+
+[languages.en.params.homeInfoParams]
+  Title = "Santiago Ramis"
+  Content = "Platform Engineer with 20+ years of experience in IT. Currently focused on Kubernetes, GitOps and infrastructure automation. I build and operate TekGarden, a homelab turned into a production platform."
+
+[languages.es.params.homeInfoParams]
+  Title = "Santiago Ramis"
+  Content = "Ingeniero de Plataforma con más de 20 años de experiencia en IT. Actualmente enfocado en Kubernetes, GitOps y automatización de infraestructura. Construyo y opero TekGarden, un homelab convertido en plataforma de producción."
 
 # Editable links
 [params.editPost]
