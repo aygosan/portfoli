@@ -1,0 +1,15 @@
+/* Diagrama Mermaid: aprofita l'amplada del contingut i queda centrat */
+.md-content .mermaid,
+.post-content .mermaid {
+  max-width: 100%;
+  margin: 1.5rem auto;
+  text-align: center;
+  overflow-x: auto;
+}
+.md-content .mermaid svg,
+.post-content .mermaid svg {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
