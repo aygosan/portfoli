@@ -10,10 +10,10 @@ draft: false
 
 Sóc Santiago Ramis, enginyer de Plataforma i visc en un poblet petit de Mallorca, Puigpunyent, i a més, fa més de 20 anys que vaig començar amb el que ha estat també el meu hobby al món de la Informàtica. Actualment està enfocat en Kubernetes, GitOps i automatització d'infraestructura a la indústria de l'automoció.
 
-- **Volkswagen Digital:Hub**: Platform Engineer, OpenShift i GitOps amb ArgoCD (Oct 2023–Actualitat)
-- **Dare Planet Technology · Adidas**: Platform Engineer, pipelines CI/CD, infraestructura cloud (Nov 2021–Oct 2023)
-- **Brújula, a CMC company**: Administrador de Sistemes Linux (Jun 2018–Nov 2021)
-- **RIU Hotels & Resorts**: Operador IT (Jul 2007–Mar 2009)
+- **Volkswagen Digital:Hub**: Platform Engineer, OpenShift i GitOps amb ArgoCD (Oct 2023-Actualitat)
+- **Dare Planet Technology · Adidas**: Platform Engineer, pipelines CI/CD, infraestructura cloud (Nov 2021-Oct 2023)
+- **Brújula, a CMC company**: Administrador de Sistemes Linux (Jun 2018-Nov 2021)
+- **RIU Hotels & Resorts**: Operador IT (Jul 2007-Mar 2009)
 
 Disseny i opero plataformes multi-entorn sobre OpenShift, gestionant tot el cicle de vida des del desenvolupament de Helm charts fins a l'entrega contínua amb ArgoCD. El meu fort és convertir problemes d'infraestructura complexos en solucions simples i automatitzades: ja sigui migrant desplegaments legacy a GitOps, implementant stacks d'observabilitat, o construint pipelines de CI/CD.
 
