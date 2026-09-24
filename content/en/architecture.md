@@ -23,14 +23,7 @@ Sample network topology: VLANs separated for management, users, services and IoT
 ### Network Overview
 
 {{< mermaid >}}
-
 flowchart TB
-    classDef ext fill:#1f2937,stroke:#9ca3af,color:#f9fafb,stroke-width:1px
-    classDef edge fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px
-    classDef fw fill:#3b1d1d,stroke:#f87171,color:#fee2e2,stroke-width:1px
-    classDef onprem fill:#0f2a1d,stroke:#4ade80,color:#dcfce7,stroke-width:1px
-    classDef sec fill:#2a1f0f,stroke:#fbbf24,color:#fef3c7,stroke-width:1px
-    classDef off fill:#1f1f1f,stroke:#6b7280,color:#d1d5db,stroke-width:1px,stroke-dasharray:4 3
 
     subgraph Internet["Internet"]
         USER["Usuaris<br/>navegador"]
@@ -89,13 +82,6 @@ flowchart TB
 
     K8S -.->|op inject| ONEPW
     K8S -.->|alertes| TG
-
-    class USER,REMOTE ext
-    class CF,PANGOLIN,FORGEJO edge
-    class PFSENSE fw
-    class PROXMOX,K8S,QNAP,TRAEFIK_K,TRAEFIK_Q,PBS onprem
-    class B2,ONEPW,TG sec
-    class EXTDISK off
 {{< /mermaid >}}
 
 ### Flow Description
