@@ -22,7 +22,6 @@ Topologia de xarxa d'exemple: VLANs separades per gestió, usuaris, serveis i Io
 
 ### Visió de xarxa
 
-![Visió de xarxa: flux d'accés zero-trust (Cloudflare, Pangolin, pfSense, Traefik)](/visio-xarxa-flux.svg)
 
 ### Descripció del flux
 

@@ -22,7 +22,6 @@ Sample network topology: VLANs separated for management, users, services and IoT
 
 ### Network Overview
 
-![Network overview: zero-trust access flow (Cloudflare, Pangolin, pfSense, Traefik)](/visio-xarxa-flux-en.svg)
 
 ### Flow Description
 

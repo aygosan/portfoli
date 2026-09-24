@@ -22,7 +22,6 @@ Topología de red de ejemplo: VLANs separadas para gestión, usuarios, servicios
 
 ### Visión de red
 
-![Visión de red: flujo de acceso zero-trust (Cloudflare, Pangolin, pfSense, Traefik)](/visio-xarxa-flux-es.svg)
 
 ### Descripción del flujo
 
