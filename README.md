@@ -1,4 +1,4 @@
-# Santiago Ramis — Portfolio
+# Portfoli
 
 Personal portfolio website built with Hugo and PaperMod theme.
 
