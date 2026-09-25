@@ -12,7 +12,7 @@ Personal portfolio website built with Hugo and PaperMod theme.
 
 ## Languages
 
-- Català (ca) — default
+- Català (ca)
 - English (en)
 - Español (es)
 
